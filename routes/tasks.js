@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 var TaskModel = require("../models/task");
 
+//GET tasks listing
 router.get("/", function(req, res, next) {
   TaskModel.find().then(tasks => res.json(tasks));
 });
