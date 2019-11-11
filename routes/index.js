@@ -1,72 +1,80 @@
 var express = require('express');
 var router = express.Router();
 
-// Home page functions
+// HOME PAGE functions
 router.get('/', function(req, res, next) {
   res.render('get index', { title: 'Flavorly' });
 });
 
 router.post('/', function(req, res, next) {
-  res.render('post index');
+  res.send('post index');
 });
 
 router.put('/', function(req, res, next) {
-  res.render('put index');
+  console.log(req.params.id);
+  console.log(req.body.name);
+  res.send('put index');
 });
 
 router.delete('/', function(req, res, next) {
-  res.render('delete index');
+  res.send('delete index');
 });
 
-// Full form page functions
+// FULL FORM page functions
 router.get('/tasks', function(req, res, next) {
   res.render('get tasks');
 });
 
 router.post('/', function(req, res, next) {
-  res.render(' post tasks');
+  res.send(' post tasks');
 });
 
 router.put('/', function(req, res, next) {
-  res.render(' put tasks');
+  console.log(req.params.id);
+  console.log(req.body.name);
+  res.send(' put tasks');
 });
 
 router.delete('/', function(req, res, next) {
-  res.render('delete tasks');
+  res.send('delete tasks');
 });
 
-// Simple form page functions
+// SIMPLE FORM page functions
 router.get('/tasks', function(req, res, next) {
   res.render('get tasks');
 });
 
 router.post('/', function(req, res, next) {
-  res.render(' post tasks');
+  res.send(' post tasks');
 });
 
 router.put('/', function(req, res, next) {
-  res.render(' put tasks');
+  console.log(req.params.id);
+  console.log(req.body.name);
+  res.send(' put tasks');
 });
 
 router.delete('/', function(req, res, next) {
-  res.render('delete tasks');
+  res.send('delete tasks');
 });
 
-// Recipe page functions
+// RECIPE page functions
 router.get('/tasks', function(req, res, next) {
   res.render('get tasks');
 });
 
 router.post('/', function(req, res, next) {
-  res.render(' post tasks');
+  res.send(' post tasks');
 });
 
 router.put('/', function(req, res, next) {
-  res.render(' put tasks');
+  console.log(req.params.id);
+  console.log(req.body.name);
+  res.send(' put tasks');
 });
 
 router.delete('/', function(req, res, next) {
-  res.render('delete tasks');
+  res.send('delete tasks');
 });
 
 module.exports = router;
