@@ -1,0 +1,41 @@
+<p>full-recipe-form works!</p>
+<div>
+    <div>
+        <div class="form-header">
+            <h3>Form title placeholder</h3>
+        </div>
+        <form action="submit">
+            <label for="recipeName" class="">Recipe Name</label><br>
+            <input type="text" name="recipeName" id="recipeName" class="form-control">
+            <input type="text" name="addIngredient" id="addIngredient" placeholder="Add ingredient" class="form-control"><br>
+            <input type="image" src="/" alt="" class="img">
+            <button>Add image</button>
+            <div class="btn-group" uib-dropdown on-toggle="toggledDropdown(open)" keyboard-nav>
+                <button type="button" class="btn btn-default" ng-click="click()">
+                    Select Category
+                </button>
+                <button type="button" class="btn btn-default" uib-dropdown-toggle>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" uib-dropdown-menu role="menu">
+                    <li role="menuitem">
+                        <a href>Appetizers</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li role="menuitem">
+                        <a href>Entrees</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li role="menuitem">
+                        <a href>Desserts</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li role="menuitem">
+                        <a href>Drinks</a>
+                    </li>
+                    <li class="divider"></li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</div>
