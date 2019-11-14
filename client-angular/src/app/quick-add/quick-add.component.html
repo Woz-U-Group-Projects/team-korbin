@@ -14,7 +14,7 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Enter the first ingredient" formControlName="addIngredientOne">
+            <input matInput placeholder="Enter the first ingredient" formControlName="addIngredientOne" [(ngModel)]="addIngredientOne" >
             <mat-error *ngIf="quickAddForm.controls['addIngredientOne'].hasError('required')">
               You must enter at least <strong>1 ingredient</strong>.
             </mat-error>
@@ -22,7 +22,7 @@
         </div>
         <div class="col">
           <mat-form-field>
-            <input matInput type="number" placeholder="Quantity amount" formControlName="addQtyOne" min="1">
+            <input matInput type="number" placeholder="Quantity amount" [(ngModel)]="addQtyOne" formControlName="addQtyOne" min="1">
           </mat-form-field>
           <span> - </span>
           <mat-form-field>
@@ -39,7 +39,7 @@
                 </mat-select>
               </mat-form-field>
               <!-- Add a button here that will populate the ingredient entry and submit when clicked -->
-              <!-- <p>You selected: {{quickAddForm.addQtyOne}} {{ingQty}}</p> -->
+              <button mat-button> + {{addIngredientOne}} {{addQtyOne}} {{ingQty}}</button>
             </div>
       </div>
       <div class="row" *ngIf="!hasMoreIngredients">
