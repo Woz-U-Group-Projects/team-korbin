@@ -23,9 +23,10 @@ import { QuickAddComponent } from './quick-add/quick-add.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
+import { RecipeDisplayComponent } from './recipe-display/recipe-display.component';
 
 @NgModule({
-  declarations: [AppComponent, TaskDisplayComponent, DashboardComponent, NavBarComponent, HomeComponent, RecipeHomeComponent, QuickAddComponent],
+  declarations: [AppComponent, TaskDisplayComponent, DashboardComponent, NavBarComponent, HomeComponent, RecipeHomeComponent, QuickAddComponent, RecipeDisplayComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, BrowserAnimationsModule, MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule, LayoutModule, MatToolbarModule, MatSidenavModule, MatListModule, MatInputModule, MatSelectModule, MatRadioModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]

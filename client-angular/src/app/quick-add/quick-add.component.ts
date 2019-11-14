@@ -21,10 +21,6 @@ export class QuickAddComponent {
   constructor(private fb: FormBuilder) {}
 
   onSubmit() {
-<<<<<<< HEAD
     alert('Thanks for adding your recipe!');
-=======
-    alert('Thanks!');
->>>>>>> origin/OwenBFeatures
   }
 }
