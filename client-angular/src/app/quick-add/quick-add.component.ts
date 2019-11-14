@@ -21,6 +21,6 @@ export class QuickAddComponent {
   constructor(private fb: FormBuilder) {}
 
   onSubmit() {
-    alert('Thanks!');
+    alert('Thanks for adding your recipe!');
   }
 }
