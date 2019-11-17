@@ -4,7 +4,8 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-var cors = require("cors");
+//var cors = require("cors");
+var models = require("./models");
 var mongoose = require("mongoose");
 
 //pulling in routes
@@ -18,16 +19,17 @@ var app = express();
 app.set('views', path.join(_dirname, 'views'));
 app.set('view engine', 'hbs');
 
-app.use(logger("dev"));
+app.use(logger( format, "dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-app.use(cors());
+//app.use(cors());
 
 //mounting index and tasks router
 app.use('/', indexRouter);
 app.use("/tasks", tasksRouter);
+app.use("/users", usersRouter);
 
 //catch 404 and forward to error handler
 app.use(function(req, res, next) {

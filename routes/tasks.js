@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-var TaskModel = require("../models/task");
+var TaskModel = require("../models/tasks");
 
 //GET tasks listing
 router.get("/", function(req, res, next) {
