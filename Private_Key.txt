@@ -1,1 +1,3 @@
 e55344a0-274b-44ac-89b3-623de1ee6d77
+
+mongodb+srv://Eric_Carmical:<RECIPEAPP>@cluster0-rsteg.mongodb.net/test?retryWrites=true&w=majority
