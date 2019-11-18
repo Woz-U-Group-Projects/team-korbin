@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatTableDataSource } from '@angular/material';
+//import { MatTableDataSource } from '@angular/material';
 
 import { Issue } from '../issue.model';
 import { IssueService } from '../issue.service';
@@ -20,8 +20,8 @@ export class DashboardComponent implements OnInit {
   constructor(private issueService: IssueService, private router: Router) { }
   
   addIssue(recipeName, recipeimage, ingredients,  category, directions, quantity) {
-    this.issueService.addIssue(recipeName, recipeimage, ingredients, category, directions, quantity).subscribe(() => {
-      this.router.navigate(['/home']);
+    this.issueService.addIssue(recipeName, recipeimage, ingredients, category, directions, quantity, status).subscribe(() => {
+      this.router.navigate(['/dashboard']);
     });
   }
   
