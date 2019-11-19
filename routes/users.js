@@ -24,7 +24,7 @@ router.get("/signup", function(req, res, next) {
             Email: req.body.email
         }
     })
-    .spread(function(result, created){
+    .spread(function(result, created) {
         if (created) {
             res.send('User created');
         }
@@ -33,4 +33,9 @@ router.get("/signup", function(req, res, next) {
         }
     });
   });
+
+router.get("/login", function(req, res, next) {
+    res.render("login");
+});
+
 
