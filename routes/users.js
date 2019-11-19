@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-var TaskModel = require("../models/tasks");
+// var TaskModel = require("../models/task");
 
 /*GET user listing */
 router.get("/", function(req, res, next) {
@@ -38,4 +38,4 @@ router.get("/login", function(req, res, next) {
     res.render("login");
 });
 
-
+module.exports = router;
