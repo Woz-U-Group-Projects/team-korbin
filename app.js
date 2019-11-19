@@ -16,10 +16,10 @@ var tasksRouter = require("./routes/tasks");
 var app = express();
 
 //view engine setup
-app.set('views', path.join(_dirname, 'views'));
-app.set('view engine', 'hbs');
+// app.set('views', path.join(_dirname, 'views'));
+// app.set('view engine', 'hbs');
 
-app.use(logger( format, "dev"));
+app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, "public")));
 //mounting index and tasks router
 app.use('/', indexRouter);
 app.use("/tasks", tasksRouter);
-app.use("/users", usersRouter);
+//app.use("/users", usersRouter);
 
 //catch 404 and forward to error handler
 app.use(function(req, res, next) {
