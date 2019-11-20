@@ -17,13 +17,8 @@ var usersRouter = require("./routes/users");
 var app = express();
 
 //view engine setup
-<<<<<<< HEAD
-// app.set('views', path.join(_dirname, 'views'));
-// app.set('view engine', 'hbs');
-=======
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
->>>>>>> 03005c84151dfb355b0f142868f39b7ca1927386
 
 app.use(logger("dev"));
 app.use(express.json());

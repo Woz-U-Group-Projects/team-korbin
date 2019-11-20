@@ -2,27 +2,6 @@
 
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
-<<<<<<< HEAD
-// ({recipeName: {
-//     type: String
-//   },
-//   category: {
-//     type: String
-//   },
-//   ingrediants: {
-//     type: String
-//   },
-//   image: {
-//     type: String
-//   },
-//   directions: {
-//     type: String
-//   }
-// });
-
-// mongoose.model('Task', Schema);
-=======
->>>>>>> 03005c84151dfb355b0f142868f39b7ca1927386
 
 var TaskSchema = new Schema({
   name: { type: String, required: true },
