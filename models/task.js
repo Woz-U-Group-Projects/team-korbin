@@ -19,23 +19,3 @@ TaskSchema.set("toJSON", {
 });
 
 module.exports = mongoose.model("Task", TaskSchema);
-  // (
-  //   {
-  //   recipeName: {
-  //     type: String
-  //   },
-  //   category: {
-  //     type: String
-  //   },
-  //   ingredients: {
-  //     type: String
-  //   },
-  //   image: {
-  //     type: String
-  //   },
-  //   directions: {
-  //     type: String
-  //   }
-  // }
-  // )
-  // mongoose.model('Recipe', Schema);

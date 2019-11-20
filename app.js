@@ -50,7 +50,7 @@ app.use(function(err, req, res, next) {
 
 //var mongoDB = "mongodb://127.0.0.1/database";
 var mongoDB =
-  "mongodb+srv://admin:mjvx4KdK6XHEPKbl@cluster0-4c7hh.mongodb.net/test?retryWrites=true&w=majority";
+  "mongodb+srv://slkoukas14:Ridi7869trust@cluster0-w92bc.mongodb.net/test?retryWrites=true&w=majority";  
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
