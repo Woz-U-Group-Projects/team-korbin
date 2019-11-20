@@ -4,20 +4,26 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-//var cors = require("cors");
-var models = require("./models");
 var mongoose = require("mongoose");
+//var cors = require("cors");
+// var models = require("./models");
 
 //pulling in routes
 var indexRouter = require("./routes/index");
 var tasksRouter = require("./routes/tasks");
+var usersRouter = require("./routes/users");
 
 //start express
 var app = express();
 
 //view engine setup
+<<<<<<< HEAD
 // app.set('views', path.join(_dirname, 'views'));
 // app.set('view engine', 'hbs');
+=======
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'hbs');
+>>>>>>> 03005c84151dfb355b0f142868f39b7ca1927386
 
 app.use(logger("dev"));
 app.use(express.json());
@@ -49,11 +55,11 @@ app.use(function(err, req, res, next) {
 
 //var mongoDB = "mongodb://127.0.0.1/database";
 var mongoDB =
-  "mongodb+srv://ammon:Password1%21@cluster0-lhvh5.mongodb.net/test?retryWrites=true&w=majority";
-mongoose.connect(mongoDB, { useNewUrlParser: true });
+  "mongodb+srv://admin:mjvx4KdK6XHEPKbl@cluster0-4c7hh.mongodb.net/test?retryWrites=true&w=majority";
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
-db.on("connected", () => console.log(`Mongoose connection open to ${mongoDB}`));
+db.on("connected", () => console.log("Mongoose connection open to test db!")); //${mongoDB}`));
 db.on("disconnected", () => console.log("Mongoose connection disconnected"));
 db.on("error", console.error.bind(console, "Mongoose connection error:"));
 

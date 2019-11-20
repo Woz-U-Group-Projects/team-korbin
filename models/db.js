@@ -1,7 +1,7 @@
 const mongoose = requires('mongoose');
 
 mongoose.connect('mongodb://localhost:3000/recipeapp-db', { useNewUrlParser: true }, (err) => {
-    if (!err) { console.log('MongoDB Connection Succeesed.') }
+    if (!err) { console.log('MongoDB Connection Succeeded.') }
     else {console.log('Error in DB connection : ' + err) }
 });
 
