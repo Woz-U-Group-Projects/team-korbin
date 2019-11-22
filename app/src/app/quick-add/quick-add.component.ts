@@ -6,6 +6,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   templateUrl: './quick-add.component.html',
   styleUrls: ['./quick-add.component.css']
 })
+// 
 export class QuickAddComponent {
   quickAddForm = this.fb.group({
     recipe: null,

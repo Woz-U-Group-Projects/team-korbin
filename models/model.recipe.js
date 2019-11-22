@@ -16,6 +16,7 @@ class RecipeModel
     }
 }
 
+
 var RecipeSchema = new Schema({
     recipeName: { type: String, required: true },
     ingredients: { type: Array, required: true },
