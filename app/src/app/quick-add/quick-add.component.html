@@ -43,13 +43,13 @@
               <button mat-button> + {{addIngredientOne}} {{addQtyOne}} {{ingQty}}</button>
             </div>
       </div>
-      <div class="row" *ngIf="!hasMoreIngredients">
+      <!-- <div class="row" *ngIf="!hasMoreIngredients">
         <div class="col">
           <button mat-button type="button" (click)="hasMoreIngredients = !hasMoreIngredients">
             + Add more ingredients
           </button>
         </div>
-      </div>
+      </div> -->
       <div class="row" *ngIf="hasMoreIngredients">
         <div class="col">
           <mat-form-field class="full-width">
@@ -69,8 +69,9 @@
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" type="reset" >Cancel</button>
-      <button mat-raised-button color="primary" type="submit">Submit</button>
+      <button mat-raised-button color="" type="reset" >Cancel</button>
+      <button mat-raised-button color="primary" type="button">Add Recipe & Add Directions</button>
+      <button mat-raised-button color="primary" type="submit">Add Recipe</button>
     </mat-card-actions>
   </mat-card>
 </form>

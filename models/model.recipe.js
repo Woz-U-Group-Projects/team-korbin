@@ -13,19 +13,22 @@ class RecipeModel
         this.ingredientItem = ingredientItem;
         this.ingredientImage = ingredientImage;
         this.category = category;
+        this.directions = directions;
     }
 }
 
 
 var RecipeSchema = new Schema({
+    rId: { type: Number, auto: true},
     recipeName: { type: String, required: true },
     ingredients: { type: Array, required: true },
     ingredientQty: { type: Number, required: true },
     ingredientMeasure: { type: String, required: true },
     ingredientItem: { type: String, required: true },
     ingredientImage: { type: String, required: false },
-    category: { type: String, required: false }
-})
+    category: { type: String, required: false },
+    directions: { type: String, required: false }
+});
 
 RecipeSchema.set("toJSON", {
     virtuals: true

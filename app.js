@@ -12,6 +12,7 @@ var cors = require("cors");
 var indexRouter = require("./routes/index");
 var tasksRouter = require("./routes/tasks");
 var usersRouter = require("./routes/users");
+var recipe = require("./routes/recipes")
 
 //start express
 var app = express();
@@ -32,7 +33,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-//app.use(cors());
+app.use(cors());
+
+app.use('/addnew', recipe)
 
 //mounting index and tasks router
 app.use('/', indexRouter);
