@@ -1,7 +1,7 @@
-var express = require('express');
-var cors = require('cors');
-var app = express();
-var taskRouter = express.Router();
+const express = require('express');
+const cors = require('cors');
+const app = express();
+const taskRouter = express.Router();
 varTaskModel = require("./models/task");
 
 //Add recipe
