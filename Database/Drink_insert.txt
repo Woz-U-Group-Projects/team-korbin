@@ -1,0 +1,83 @@
+db.recipe_app.insertMany([{
+recipeType: "Drink", 
+recipeName: "Manhattan", 
+recipeIngredients: ["2 oz Bourbon or rye",
+		    "1 oz Sweet vermouth",
+		    "2 dashes Angostura bitters",
+		    "1 dash Orange bitters",
+		    "Garnish:",
+		      "Brandied cherry"
+], 
+recipeDirections: "Add all the ingredients into a mixing glass with ice, and stir until well-chilled. Strain into a chilled coupe.",
+recipeNutritionFacts: [""],
+recipeComments: [""]
+},
+{
+recipeType: "Drink",
+recipeName: "Gimlet",
+recipeIngredients: ["2 1/2 oz Gin",
+		    "1/2 oz Fresh lime juice",
+		    "1/2 oz Simple syrup",
+		    "Garnish:",
+		      "Lime wheel"
+],
+recipeDirections: "Add all ingredients into a shaker with ice and shake. Strain into a chilled cocktail glass or an Old Fashioned glass filled with fresh ice. Garnish with a lime wheel. (You can substitute 1 oz lime cordial, such as Rose's lime juice, for both the lime juice and simple syrup.).",
+recipeNutritionFacts: [""],
+recipeComments: [""]
+},
+{
+recipeType: "Drink",
+recipeName: "Mint Julep",
+recipeIngredients: ["1/4 oz Simple syrup",
+		    "8 Mint leaves",
+		    "2 oz Bourbon",
+		    "2 cups miniature marshmallows",
+		    "Garnish:",
+		      "Bitters", 
+		      "Mint sprig"
+],		    
+recipeDirections: "In a Julep cup or rocks glass, lightly muddle the mint and syrup. Add the bourbon and pack tightly with crushed ice. Stir until the cup is frosted on the outside. Top with more crushed ice to form an ice dome and garnish with a mint sprig and few optional drops of bitters.",
+recipeNutritionFacts: [""],
+recipeComments: [""]
+},
+{
+recipeType: "Drink",
+recipeName: "Old Fashioned",
+recipeIngredients: ["2 oz Bourbon",
+		    "1/2 tsp White sugar",
+		    "3 dashes Angostura bitters",
+		    "1 dash Regan's Orange Bitters No. 6",
+		    "1/4 oz Cold water",
+		    "1 Brown sugar cube",
+		    "Garnish:",
+		      "Lemon",
+		      "Orange twists"
+],
+recipeDirections: "Add all ingredients into a mixing glass, muddle to break down the sugar and stir briefly. Fill with ice and stir again. Strain into a rocks glass over ice. Twist slices of lemon and orange peel over the drink to express the oil and drop them in.",
+recipeNutritionFacts: [""],
+recipeComments: [""]
+},
+{
+recipeType: "Drink",
+recipeName: "Bloody Mary",
+recipeIngredients: ["1 Lemon wedge",
+		    "1 Lime wedge",
+		    "2 oz Vodka",
+		    "4 oz Tomato juice",
+		    "2 dashes Tabasco sauce",
+		    "2 tsp Prepared horseradish",
+		    "2 dashes Worcestershire sauce",
+		    "1 pinch Celery salt",
+		    "1 pinch Ground black pepper",
+		    "1 pinch smoked paprika",
+		    "Garnish:", 
+		      "Lime wedge",
+		       " Green olives", 
+		       "Parsley sprig",
+		       "Celery stalk"	    
+],
+recipeDirections: "Pour some celery salt onto a small plate. Rub the juicy side of the lemon or lime wedge along the lip of a pint glass. Roll the outer edge of the glass in celery salt until fully coated. Fill with ice and set aside. Squeeze the lemon and lime wedges into a shaker and drop them in. Add the remaining ingredients and ice and shake gently. Strain into the prepared glass. Garnish with a parsley sprig, 2 speared green olives and a lime wedge and a celery stalk (optional).",
+recipeNutritionFacts: [""],
+recipeComments: [""]
+}]);
+
