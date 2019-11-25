@@ -1,7 +1,11 @@
+//const mongoose = requires('mongoose');
+
 module.exports = {
     db: 'mongodb://localhost:3000/recipeapp-db'
 };   
     
+//require('./task.model');
+
 //     const mongoose = requires('mongoose');
 
 // mongoose.connect(', { useNewUrlParser: true }, (error) => {
