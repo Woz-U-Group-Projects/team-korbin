@@ -13,8 +13,8 @@ export class QuickAddService {
   // C# dotnetcore uses port 5000
   //apiUrl: string = "http://localhost:5000/api/quickadds";
 
-  // Express will use port 3001
-  apiUrl: string = "http://localhost:3001/recipes";
+  // Express will use port 3000
+  apiUrl: string = "http://localhost:3000/recipes";
 
   constructor(private http: HttpClient) {}
 

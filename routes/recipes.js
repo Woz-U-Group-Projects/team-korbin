@@ -7,7 +7,7 @@ router.get("/", function(req, res, next) {
   RecipeModel.find().then(recipes => res.json(recipes));
 });
 
-router.post("/newrecipe", function(req, res, next) {
+router.post("/newentry", function(req, res, next) {
   let newRecipe = new RecipeModel();
   newRecipe.rId = req.params.rId;
   newRecipe.name = req.body.recipeName;
@@ -22,7 +22,7 @@ router.post("/newrecipe", function(req, res, next) {
   newRecipe.save().then(recipe => res.json(recipe));
 });
 
-router.put("/addnew", function(req, res) {
+router.put("/:rId", function(req, res) {
   RecipeModel.findByIdAndUpdate(
     req.params.rId,
     {name: req.body.recipeName,
