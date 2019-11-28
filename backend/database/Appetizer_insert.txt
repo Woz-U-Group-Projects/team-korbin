@@ -1,84 +1,258 @@
-db.recipe_app.insertMany([{
-recipeType: "Appetizer", 
-recipeName: "Bacon Blue Cheese App", 
-recipeIngredients: ["1 wedge (8 ounces) blue cheese",
-		    "1 tablespoon honey",
-		    "3 bacon strips, cooked and crumbled",
-		    "Assorted crackers"
-], 
-recipeDirections: "Place cheese on a serving dish. Drizzle with honey. Sprinkle with bacon. Serve with crackers.",
-recipeNutritionFacts: "1 ounce-weight: 121 calories, 9g fat (6g saturated fat), 24mg cholesterol, 450mg sodium, 3g carbohydrate (2g sugars, 0 fiber), 7g protein.",
-recipeComments: [""]
-},
-{
-recipeType: "Appetizer",
-recipeName: "Greek Garden App",
-recipeIngredients: ["1 carton (8 ounces) spreadable garden vegetable cream cheese",
-		    "2 cups crumbled feta cheese",
-		    "1/4 cup plain yogurt",
-		    "1/2 teaspoon minced garlic",
-		    "1/4 teaspoon dried oregano",
-		    "1/4 teaspoon pepper",
-		    "1-1/2 cups chopped cucumber",
-		    "1 cup chopped seeded tomatoes",
-		    "1/4 cup chopped green onions",
-		    "2 tablespoons sliced ripe olives",
-		    "Miniature pita pockets"
-],
-recipeDirections: "In a large bowl, combine the cream cheese, feta, yogurt, garlic, oregano and pepper. Spread into a 9-in. pie plate. Sprinkle the cucumber, tomatoes, onions and olives over the cream cheese mixture. Serve with pita bread. Refrigerate leftovers.",
-recipeNutritionFacts: "1/4 cup: 92 calories, 7g fat (5g saturated fat), 21mg cholesterol, 223mg sodium, 2g carbohydrate (1g sugars, 1g fiber), 3g protein.",
-recipeComments: [""]
-},
-{
-recipeType: "Appetizer",
-recipeName: "Tortellini App",
-recipeIngredients: ["4 garlic cloves, peeled",
-		    "2 tablespoons olive oil, divided",
-		    "1 package (9 ounces) refrigerated spinach tortellini",
-		    "1 cup mayonnaise",
-		    "1/4 cup grated Parmesan cheese",
-		    "1/4 cup milk",
-		    "1/4 cup prepared pesto",
-		    "1/8 teaspoon pepper",
-		    "1 pint grape tomatoes",
-		    "26 frilled toothpicks"
-],
-recipeDirections: "Place garlic cloves on a double thickness of heavy-duty foil; drizzle with 1 tablespoon oil. Wrap foil around garlic. Bake at 425° for 20-25 minutes or until tender. Cool for 10-15 minutes. Meanwhile, cook tortellini according to package directions; drain and rinse in cold water. Toss with remaining oil; set aside. In a small bowl, combine the mayonnaise, cheese, milk, pesto and pepper. Mash garlic into pesto mixture; stir until combined. Alternately thread tortellini and tomatoes onto toothpicks. Serve with pesto dip. Refrigerate leftovers.",
-recipeNutritionFacts: "2 appetizers: 246 calories, 20g fat (4g saturated fat), 19mg cholesterol, 249mg sodium, 11g carbohydrate (1g sugars, 1g fiber), 5g protein.",
-recipeComments: [""]
-},
-{
-recipeType: "Appetizer",
-recipeName: "Asparagus Appetizer Roll Ups",
-recipeIngredients: ["1 container (8 ounces) spreadable cream cheese",
-		    "8 bacon strips, cooked and crumbled",
-		    "2 tablespoons chopped green onion",
-		    "12 slices white bread, crusts removed",
-		    "24 fresh asparagus spears, trimmed",
-		    "1/4 cup butter, melted",
-		    "3 tablespoons grated Parmesan cheese"
-],
-recipeDirections: "In a small bowl, combine the cream cheese, bacon and green onion. Flatten bread slices with a rolling pin; spread tops with cream cheese mixture. Trim asparagus 2 in. longer than bread. Place two spears on each slice; roll up bread and place seam side down on a greased baking sheet. Brush with butter; sprinkle with Parmesan cheese. Bake at 400° for 10-12 minutes or until lightly browned. Serve immediately.",
-recipeNutritionFacts: "",
-recipeComments: [""]
-},
-{
-recipeType: "Appetizer",
-recipeName: "Garlic Mushroom App",
-recipeIngredients: ["1 cup chopped onion",
-		    "1/2 cup canola oil",
-		    "3 tablespoons butter",
-		    "2 pounds fresh mushrooms, sliced",
-		    "1 can (28 ounces) crushed tomatoes in puree, undrained",
-		    "1 teaspoon salt",
-		    "1/4 teaspoon pepper",
-		    "1/2 cup red wine vinegar",
-		    "1 bunch fresh parsley, finely chopped (about 1-1/2 cups)",
-		    "3 garlic cloves, minced",
-		    "Sliced French bread"
-],
-recipeDirections: "In a large saucepan, saute onion in oil and butter until crisp-tender. Add mushrooms; cook for 2 minutes or until vegetables are tender. Add the tomatoes, salt and pepper; cover and simmer for 20-30 minutes. Stir in the vinegar, parsley and garlic. Cover and simmer for 10 minutes. Cover and refrigerate for several hours or overnight. To serve, spoon onto slices of French bread.",
-recipeNutritionFacts: "2 tablespoons: 118 calories, 9g fat (2g saturated fat), 6mg cholesterol, 240mg sodium, 8g carbohydrate (1g sugars, 2g fiber), 3g protein.",
-recipeComments: [""]
-}]);
+db.recipeapp.({
+    "id": null,
+    "category": "Appetizer",
+    "recipeName": "Bacon Blue Cheese Dip",
+    "ingredients": [
+        {
+        "qty": 8,
+        "measurement": "oz",
+        "ingredient": "blue cheese"
+        },
+        {
+        "qty": 1,
+        "measurement": "tbls",
+        "ingredient": "honey"
+        },
+        {
+        "qty": 3,
+        "measurement": null,
+        "ingredient": "Cooked and crumbled bacon strips"
+        },
+        {
+        "qty": 20,
+        "measurement": null,
+        "ingredient": "Assorted crackers"
+        }],
+        "directions": ["Place cheese on a serving dish. Drizzle with honey. Sprinkle with bacon. Serve with crackers."],
+        "image": "data:database/images/Appetizers/Bacon-Blue-Cheese-Appetizer.jpg"
+	},       
+    {
+    "id": null,
+    "category": "Appetizer",
+    "recipeName": "Greek Garden App",
+    "ingredients": [
+        {
+        "qty": 1,
+        "measurement": null,
+        "ingredient": "spreadable garden vegetable cream cheese carton (8 ounces)"
+        },
+        {
+        "qty": 2,
+        "measurement": "cups",
+        "ingredient": "crumbled feta cheese"
+        },
+        {
+        "qty": 0.25,
+        "measurement": "cup",
+        "ingredient": "Plain yogurt"
+        },
+        {
+        "qty": 0.5,
+        "measurement": "tsp",
+        "ingredient": "Minced garlic"
+        },
+        {
+        "qty": 0.25,
+        "measurement": "tsp",
+        "ingredient": "Dried oregano"
+        },
+        {
+        "qty": 0.25,
+        "measurement": "tsp",
+        "ingredient": "Black pepper"
+        },
+        {
+        "qty": 1.5,
+        "measurement": "cups",
+        "ingredient": "Chopped cucumber"
+        },
+        {
+        "qty": 1,
+        "measurement": "cup",
+        "ingredient": "Chopped season tomatoes"
+        },
+        {
+        "qty": 0.25,
+        "measurement": "cup",
+        "ingredient": "Chopped green onions"
+        },
+        {
+        "qty": 2,
+        "measurement": "tbls",
+        "ingredient": "Sliced ripe olives"
+        },
+        {
+        "qty": null,
+        "measurement": "null",
+        "ingredient": "Miniture pita pockets"
+        }],
+        "directions": ["In a large bowl, combine the cream cheese, feta, yogurt, garlic, oregano and pepper. Spread into a 9-inch pie plate. Sprinkle the cucumber, tomatoes, onions, and olives over the cream cheese mixture. Serve with pita bread. Refrigerate leftovers."],
+        "image": "data:database/images/Appetizers/Greek-Garden-App.jpg"
+	},
+	{
+    "id": null,
+    "category": "Appetizer",
+    "recipeName": "Tortellini App",
+    "ingredients": [
+        {
+        "qty": 4,
+        "measurement": null,
+        "ingredient": "Peeled garlic cloves"
+        },
+        {
+        "qty": 2,
+        "measurement": "tbls",
+        "ingredient": "Olive oil, divided"
+        },
+        {
+        "qty": 9,
+        "measurement": "oz",
+        "ingredient": "Refrigerated spiniach tortellini"
+        },
+        {
+        "qty": 1,
+        "measurement": "cup",
+        "ingredient": "Mayonnaise"
+        },
+        {
+        "qty": 0.25,
+        "measurement": "cup",
+        "ingredient": "Grated parmesan cheese"
+        },
+        {
+        "qty": 0.25,
+        "measurement": "cup",
+        "ingredient": "Milk"
+        },
+		{
+        "qty": 0.25,
+        "measurement": "cup",
+        "ingredient": "Prepared pesto"
+        },
+        {
+        "qty": 0.125,
+        "measurement": "tsp",
+        "ingredient": "Black pepperr"
+        },
+        {
+        "qty": 20,
+        "measurement": null,
+        "ingredient": "Grape tomatoes"
+        },
+        {
+        "qty": 26,
+        "measurement": null,
+        "ingredient": "Frilled toothpicks"
+        }],
+        "directions": ["Place garlic cloves on a double thickness of heavy-duty foil; drizzel with 1 tablespoon oil. Wrap foil around garlic. Bake at 425 degrees for 20-25 minutes or until tender. Cool for 10-15 minutes. Meanwhile, cook tortellini according to package directions; drain and rinse in cold water. Toss with remaining oil; set aside. In a small bowl, combine the mayonnaise, cheese, milk, pesto, and black pepper. Mash garlic into pesto mixture; stir until combined. Alternately thread tortellini and tomatoes on to toothpicks. Serve with pesto dip. Refrigerate leftovers."],
+        "image": "data:database/images/Appetizers/Tortellini-Appetizer.jpg"
+	},
+	{
+    "id": null,
+    "category": "Appetizer",
+    "recipeName": "Asparagus Appetizer Roll Ups",
+    "ingredients": [
+        {
+        "qty": 8,
+        "measurement": "oz",
+        "ingredient": "Spreadable cream cheese"
+        },
+        {
+        "qty": 8,
+        "measurement": null,
+        "ingredient": "Cooked and crumbled bacon"
+        },
+        {
+        "qty": 2,
+        "measurement": "tbls",
+        "ingredient": "Chopped green onion"
+        },
+        {
+        "qty": 12,
+        "measurement": null,
+        "ingredient": "Slices of white bread, crusts removed"
+        },
+        {
+        "qty": 24,
+        "measurement": null,
+        "ingredient": "Fresh asparagus spears, trimmed"
+        },
+        {
+        "qty": 0.25,
+        "measurement": "cup",
+        "ingredient": "Butter, melted"
+        },
+		{
+        "qty": 3,
+        "measurement": "tbls",
+        "ingredient": "Grated parmesan cheese"
+        }],
+        "directions": ["In a small bowl, combine the cream cheese, bacon, and green onions. Flatten bread slices with a rolling pin; spread tops with cream cheese mixture. Trim asparagus 2 inches longer than bread. Place two spears on each slice; roll up and place seam side down on a greased backing sheet. Brush with butter; sprinkle with Parmesan cheese. Bake at 400 degrees for 10-12 minutes or until lightly brown. Serve immediately."],
+        "image": "data:database/images/Appetizers/Asparagus-Appetizer-Roll-Ups.jpg"
+	},
+		{
+    "id": null,
+    "category": "Appetizer",
+    "recipeName": "Garlic Mushroom App",
+    "ingredients": [
+        {
+        "qty": 1,
+        "measurement": null,
+        "ingredient": "Chopped onion"
+        },
+        {
+        "qty": 0.5,
+        "measurement": "cup",
+        "ingredient": "Canola oil"
+        },
+        {
+        "qty": 3,
+        "measurement": "tsp",
+        "ingredient": "Butter"
+        },
+        {
+        "qty": 2,
+        "measurement": "lbs",
+        "ingredient": "Fresh sliced mushrooms"
+        },
+        {
+        "qty": 1,
+        "measurement": "can",
+        "ingredient": "Crushed tomtoes, undrained (28 ounces)"
+        },
+        {
+        "qty": 1,
+        "measurement": "tsp",
+        "ingredient": "Salt"
+        
+		{
+        "qty": 0.25,
+        "measurement": "tsp",
+        "ingredient": "Black pepper"
+		},
+		{
+        "qty": 0.5,
+        "measurement": "cup",
+        "ingredient": "Red wine vinager"
+        },
+		{
+        "qty": 1.5,
+        "measurement": "cup",
+        "ingredient": "Fresh, finely chopped parsley"
+        },
+		{
+        "qty": 3,
+        "measurement": null,
+        "ingredient": "Garlic cloves minced"
+        },
+		{
+        "qty": null,
+        "measurement": null,
+        "ingredient": "Sliced french bread"
+        },
+        }],
+        "directions": ["In a small bowl, combine the cream cheese, bacon, and green onions. Flatten bread slices with a rolling pin; spread tops with cream cheese mixture. Trim asparagus 2 inches longer than bread. Place two spears on each slice; roll up and place seam side down on a greased backing sheet. Brush with butter; sprinkle with Parmesan cheese. Bake at 400 degrees for 10-12 minutes or until lightly brown. Serve immediately."],
+        "image": "data:database/images/Appetizers/Asparagus-Appetizer-Roll-Ups.jpg"
+	},
+});
 

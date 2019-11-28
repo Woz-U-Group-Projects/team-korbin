@@ -1,0 +1,28 @@
+db.recipeapp.insertOne({
+    "id": null,
+    "category": "Appetizer",
+    "recipeName": "Bacon Blue Cheese Dip",
+    "ingredients": [
+        {
+        "qty": 8,
+        "measurement": "oz",
+        "ingredient": "blue cheese"
+        },
+        {
+        "qty": 1,
+        "measurement": "Tbls",
+        "ingredient": "honey"
+        },
+        {
+        "qty": 3,
+        "measurement": null,
+        "ingredient": "Cooked and crumbled bacon strips"
+        },
+        {
+        "qty": 20,
+        "measurement": null,
+        "ingredient": "Assorted crackers"
+        }],
+        "directions": ["Place cheese on a serving dish. Drizzle with honey. Sprinkle with bacon. Serve with crackers."],
+        "image": "data:database/images/Appetizers/Bacon-Blue-Cheese-Appetizer.jpg"       
+});
