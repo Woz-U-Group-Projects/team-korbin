@@ -1,27 +1,27 @@
 //dependencies
 var createError = require('http-errors');
 var express = require("express");
+var exphbs = require("express-handlebars");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var cors = require("cors");
-// var exphbs = require('express-handlebars');
 // var models = require("./models");
 
 //pulling in routes
 var indexRouter = require("./routes/index");
 var tasksRouter = require("./routes/tasks");
 var usersRouter = require("./routes/users");
-var recipe = require("./routes/recipes")
+var recipesRouter = require("./routes/recipes")
 
 //start express
 var app = express();
 
 //view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.engine('.hbs', exphbs({extname: '.hbs'}));
 app.set('view engine', 'hbs');
-// app.engine('.hbs', exphbs({extname: '.hbs'}));
+app.set('views', path.join(__dirname, 'views'));
 
 //CORS
 app.use(function(req, res, next) {
@@ -37,12 +37,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 
-app.use('/addnew', recipe)
+// app.use('/addnew', recipe)
 
 //mounting index and tasks router
 app.use('/', indexRouter);
 app.use("/tasks", tasksRouter);
 app.use("/users", usersRouter);
+app.use("/recipes", recipesRouter);
 
 //catch 404 and forward to error handler
 app.use(function(req, res, next) {

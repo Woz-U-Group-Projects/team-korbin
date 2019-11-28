@@ -14,6 +14,7 @@ class RecipeModel
         this.ingredientImage = ingredientImage;
         this.category = category;
         this.directions = directions;
+        this.recipeNew = recipeNew;
     }
 }
 
@@ -27,7 +28,8 @@ var RecipeSchema = new Schema({
     ingredientItem: { type: String, required: true },
     ingredientImage: { type: String, required: false },
     category: { type: String, required: false },
-    directions: { type: String, required: false }
+    directions: { type: String, required: false },
+    recipeNew: { type: Boolean, required: false, default: true }
 });
 
 // Duplicate the ID field.

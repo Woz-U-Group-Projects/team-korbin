@@ -21,8 +21,8 @@ mongoose.connect(dbConfig.db, { useNewUrlParser: true })
     )
 
 app.set('views', path.join(_direname, '/views/'));
-app.engine('hbs', exphbs({ extname: 'hbs', defaultLayout: 'mainLayout', layoutDir: _dirname + 'views/layouts/' }));
 app.set('view engine', 'hbs');
+app.engine('hbs', exphbs({ extname: 'hbs'}));
 
 app.listen(3000, () => {
     console.log('Express server started at port : 3000');
