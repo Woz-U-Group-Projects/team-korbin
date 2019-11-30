@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
-const taskRouter = express.Router();
+const taskRoute = express.Router();
 const TaskModel = require("./models/task");
 
-//Add recipe
-taskRoute.router('/create').post((req, res, next) => {
+//POST Create Recipe
+taskRoute.route('/create').post((req, res, next) => {
   TaskModel.create(req.body, (error, data) => {
     if(error) {
       return next(error)
@@ -15,8 +15,8 @@ taskRoute.router('/create').post((req, res, next) => {
   })
 })
 
-//Get all recipes
-taskRoute.router('/').get((req, res) => {
+//GET All Recipes
+taskRoute.route('/').get((req, res) => {
   TaskModel.find((error, data) => {
     if(error) {
       return next(error)
@@ -27,8 +27,8 @@ taskRoute.router('/').get((req, res) => {
   })
 })
 
-//Get single recipe
-taskRoute.router('/read/:id').get((req, res) => {
+//GET Single Recipe
+taskRoute.route('/read/:id').get((req, res) => {
   TaskModel.findById(req.params.id, (error, data) => {
     if(error) {
       return next(error)
@@ -39,8 +39,8 @@ taskRoute.router('/read/:id').get((req, res) => {
   })
 })
 
-//Update receipe
-taskRoute.router('/update/:id').put((req, res, next) => {
+//PUT Update Receipe
+taskRoute.route('/update/:id').put((req, res, next) => {
   TaskModel.findByIdAndUpdate(req.params.id, {
     $set:req.body},(error, data) => {
     if(error) {
@@ -49,12 +49,12 @@ taskRoute.router('/update/:id').put((req, res, next) => {
     }
     else {
       res.json(data)
-      console.log('Data updated successfully')
+      console.log('Updated successfully')
     }
   })
 })
 
-//Delete recipe
+//DELETE recipe
 taskRoute.router('/delete/:id').delete((req, res, next) => {
   TaskModel.findOneAndRemove(req.params.id, (error, data) => {
     if(error) {
@@ -62,13 +62,13 @@ taskRoute.router('/delete/:id').delete((req, res, next) => {
     }
     else {
       res.status(200).json({
-        msg: data
+        mag: data
       })
     }
   })
 })
 
-module.exports = taskRouter;
+module.exports = taskRoute;
 
 // //GET tasks listing
 // router.get("/", function(req, res, next) {

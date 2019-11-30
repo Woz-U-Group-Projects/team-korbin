@@ -1,5 +1,5 @@
 module.exports = {
-    db: 'mongodb://localhost:3000/recipeapp-db'
+    db: 'mongodb://localhost:27017/recipeapp-db'
 };   
     
 //     const mongoose = requires('mongoose');
