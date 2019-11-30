@@ -1,25 +1,31 @@
 var express = require("express");
 var router = express.Router();
-var RecipeModel = require("../models/model.recipe");
+var Recipe = require("../models/model.recipe");
 
 //GET recipes listing
 router.get("/", function(req, res, next) {
-  RecipeModel.find().then(recipes => res.json(recipes));
+  Recipe.find().then(recipes => res.json(recipes));
 });
 
 router.post("/newentry", function(req, res, next) {
-  let newRecipe = new RecipeModel();
-  newRecipe.rId = req.params.rId;
-  newRecipe.name = req.body.recipeName;
-  newRecipe.ingredients = req.body.ingredients[
-    newRecipe.ingredientItem = req.body.ingredientItem,
-    newRecipe.ingredientQty = req.body.ingredientQty,
-    newRecipe.ingredientMeasurement = req.body.ingredientMeasurement
-  ];
-  newRecipe.image = req.body.ingredientImage;
-  newRecipe.category = req.body.category;
-  newRecipe.new = true;
-  newRecipe.save().then(recipe => res.json(recipe));
+  let newRecipe = new Recipe();
+  newRecipe.save(
+    // newRecipe.rId = req.params.rId,
+    newRecipe.name = req.body.recipeName,
+    newRecipe.ingredients = req.body.ingredients[
+      newRecipe.ingredientItem = req.body.ingredientItem,
+      newRecipe.ingredientQty = req.body.ingredientQty,
+      newRecipe.ingredientMeasurement = req.body.ingredientMeasurement
+    ],
+    newRecipe.image = req.body.ingredientImage,
+    newRecipe.category = req.body.category,
+    newRecipe.new = true
+    )
+    .then(recipe => 
+      res.json(recipe))
+    .catch(err => {
+      res.status(400).send("Unable to save data to database on POST.  Error: " + err );
+    });
 });
 
 router.put("/:rId", function(req, res) {

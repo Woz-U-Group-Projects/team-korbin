@@ -5,7 +5,7 @@ class RecipeModel
 {
     constructor(rId, recipeName, ingredients, ingredientQty, ingredientMeasure, ingredientItem, category, ingredientImage)
     {
-        this.rId = rId;
+        this.rId = mongoose.Types.ObjectId;
         this.recipeName = recipeName;
         this.ingredients = ingredients;
         this.ingredientQty = ingredientQty;
@@ -21,11 +21,11 @@ class RecipeModel
 
 var RecipeSchema = new Schema({
     rId: { type: Number, auto: true},
-    recipeName: { type: String, required: true },
-    ingredients: { type: Array, required: true },
-    ingredientQty: { type: Number, required: true },
-    ingredientMeasure: { type: String, required: true },
-    ingredientItem: { type: String, required: true },
+    recipeName: { type: String, required: false },
+    ingredients: { type: Array, required: false },
+    ingredientQty: { type: Number, required: false },
+    ingredientMeasure: { type: String, required: false },
+    ingredientItem: { type: String, required: false },
     ingredientImage: { type: String, required: false },
     category: { type: String, required: false },
     directions: { type: String, required: false },
