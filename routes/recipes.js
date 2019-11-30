@@ -7,18 +7,21 @@ router.get("/", function(req, res, next) {
   Recipe.find().then(recipes => res.json(recipes));
 });
 
+//For new entry from dashboard
 router.post("/newentry", function(req, res, next) {
+  let b = req.body;
   let newRecipe = new Recipe();
   newRecipe.save(
     // newRecipe.rId = req.params.rId,
-    newRecipe.name = req.body.recipeName,
-    newRecipe.ingredients = req.body.ingredients[
-      newRecipe.ingredientItem = req.body.ingredientItem,
-      newRecipe.ingredientQty = req.body.ingredientQty,
-      newRecipe.ingredientMeasurement = req.body.ingredientMeasurement
-    ],
-    newRecipe.image = req.body.ingredientImage,
-    newRecipe.category = req.body.category,
+    newRecipe.recipeName = b.name,
+    newRecipe.ingredients = b.ingredients[
+      newRecipe.ingredientItem = b.ingredientItem,
+      newRecipe.ingredientQty = b.ingredientQty,
+      newRecipe.ingredientMeasurement = b.ingredientMeasurement
+],
+    newRecipe.image = b.ingredientImage,
+    newRecipe.category = b.category,
+    newRecipe.directions = b.directions,
     newRecipe.new = true
     )
     .then(recipe => 
@@ -27,6 +30,11 @@ router.post("/newentry", function(req, res, next) {
       res.status(400).send("Unable to save data to database on POST.  Error: " + err );
     });
 });
+
+//Post new entry from sidebar menu
+
+
+//Update from new entry from dashboard
 
 router.put("/:rId", function(req, res) {
   RecipeModel.findByIdAndUpdate(

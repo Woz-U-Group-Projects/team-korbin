@@ -29,6 +29,7 @@ import { RecipeDisplayComponent } from './recipe-display/recipe-display.componen
   declarations: [AppComponent, TaskDisplayComponent, DashboardComponent, NavBarComponent, HomeComponent, RecipeHomeComponent, QuickAddComponent, RecipeDisplayComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, BrowserAnimationsModule, MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule, LayoutModule, MatToolbarModule, MatSidenavModule, MatListModule, MatInputModule, MatSelectModule, MatRadioModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [QuickAddComponent]
 })
 export class AppModule {}
