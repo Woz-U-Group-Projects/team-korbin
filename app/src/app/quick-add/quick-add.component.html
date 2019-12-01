@@ -1,4 +1,4 @@
-<form [formGroup]="quickAddForm" novalidate (ngSubmit)="onSubmit()">
+<form [formGroup]="quickAddForm" routerLink="/newentry" novalidate (ngSubmit)="onSubmit()">
   <mat-card class="quick-add-card">
     <mat-card-header>
       <mat-card-title>Quick Add A Recipe</mat-card-title>
@@ -14,7 +14,7 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Enter the first ingredient" formControlName="addIngredientOne">
+            <input matInput placeholder="Enter the first ingredient" formControlName="addIngredientOne" [(ngModel)]="addIngredientOne" >
             <mat-error *ngIf="quickAddForm.controls['addIngredientOne'].hasError('required')">
               You must enter at least <strong>1 ingredient</strong>.
             </mat-error>
@@ -22,7 +22,7 @@
         </div>
         <div class="col">
           <mat-form-field>
-            <input matInput type="number" placeholder="Quantity amount" formControlName="addQtyOne" min="1">
+            <input matInput type="number" placeholder="Quantity amount" [(ngModel)]="addQtyOne" formControlName="addQtyOne" min="1">
           </mat-form-field>
           <span> - </span>
           <mat-form-field>
@@ -32,23 +32,25 @@
                   <mat-option value="tsp">tsp</mat-option>
                   <mat-option value="tbl">tbl</mat-option>
                   <mat-option value="oz">oz</mat-option>
+                  <mat-option value="lb">lb</mat-option>
                   <mat-option value="cup">cup</mat-option>
                   <mat-option value="qt">qt</mat-option>
                   <mat-option value="pt">pt</mat-option>
                   <mat-option value="gal">gal</mat-option>
+                  <mat-option value="cnt">cnt</mat-option>
                 </mat-select>
               </mat-form-field>
               <!-- Add a button here that will populate the ingredient entry and submit when clicked -->
-              <!-- <p>You selected: {{quickAddForm.addQtyOne}} {{ingQty}}</p> -->
+              <button mat-button> + {{addIngredientOne}} {{addQtyOne}} {{ingQty}}</button>
             </div>
       </div>
-      <div class="row" *ngIf="!hasMoreIngredients">
+      <!-- <div class="row" *ngIf="!hasMoreIngredients">
         <div class="col">
           <button mat-button type="button" (click)="hasMoreIngredients = !hasMoreIngredients">
             + Add more ingredients
           </button>
         </div>
-      </div>
+      </div> -->
       <div class="row" *ngIf="hasMoreIngredients">
         <div class="col">
           <mat-form-field class="full-width">
@@ -68,8 +70,9 @@
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" type="reset" >Cancel</button>
-      <button mat-raised-button color="primary" type="submit">Submit</button>
+      <button mat-raised-button color="" type="reset" >Cancel</button>
+      <button mat-raised-button color="primary" type="button">Add Recipe & Add Directions</button>
+      <button mat-raised-button color="primary" type="submit">Add Recipe</button>
     </mat-card-actions>
   </mat-card>
 </form>
