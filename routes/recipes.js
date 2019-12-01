@@ -7,11 +7,17 @@ router.get("/", function(req, res, next) {
   Recipe.find().then(recipes => res.json(recipes));
 });
 
+<<<<<<< HEAD
 //POST  new entry from dashboard
+=======
+//For new entry from dashboard
+>>>>>>> bf1708d2232b9753e031b6be961a76191dcbff51
 router.post("/newentry", function(req, res, next) {
+  let b = req.body;
   let newRecipe = new Recipe();
   newRecipe.save(
     // newRecipe.rId = req.params.rId,
+<<<<<<< HEAD
     newRecipe.name = req.body.recipeName,
     newRecipe.ingredients = req.body.ingredients[
       newRecipe.ingredientItem = req.body.ingredientItem,
@@ -21,6 +27,17 @@ router.post("/newentry", function(req, res, next) {
     newRecipe.image = req.body.ingredientImage,
     newRecipe.category = req.body.category,
     newRecipe.directiona = req.body.directions,
+=======
+    newRecipe.recipeName = b.name,
+    newRecipe.ingredients = b.ingredients[
+      newRecipe.ingredientItem = b.ingredientItem,
+      newRecipe.ingredientQty = b.ingredientQty,
+      newRecipe.ingredientMeasurement = b.ingredientMeasurement
+],
+    newRecipe.image = b.ingredientImage,
+    newRecipe.category = b.category,
+    newRecipe.directions = b.directions,
+>>>>>>> bf1708d2232b9753e031b6be961a76191dcbff51
     newRecipe.new = true
     )
     .then(recipe => 
@@ -30,6 +47,7 @@ router.post("/newentry", function(req, res, next) {
     });
 });
 
+<<<<<<< HEAD
 //POST new entry from sidebar
 router.post("/newentry/sidebar", function(req, res, next) {
   let newRecipe = new Recipe();
@@ -72,6 +90,13 @@ router.put("/:rId", function(req, res) {
 });
 
 //PUT Update from new entry from sidebar
+=======
+//Post new entry from sidebar menu
+
+
+//Update from new entry from dashboard
+
+>>>>>>> bf1708d2232b9753e031b6be961a76191dcbff51
 router.put("/:rId", function(req, res) {
   RecipeModel.findByIdAndUpdate(
     req.params.rId,

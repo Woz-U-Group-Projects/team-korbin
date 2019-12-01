@@ -23,6 +23,6 @@ export class QuickAddService {
   }
 
   addRecipe(quickadd): Observable<Recipe> {
-    return this.http.post<Recipe>(this.apiUrl, quickadd);
+    return this.http.post<Recipe>(`${this.apiUrl}/newentry`, quickadd);
   }
 }

@@ -24,11 +24,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { RecipeDisplayComponent } from './recipe-display/recipe-display.component';
+import { RecipeImageCardComponent } from './recipe-image-card/recipe-image-card.component';
 
 @NgModule({
-  declarations: [AppComponent, TaskDisplayComponent, DashboardComponent, NavBarComponent, HomeComponent, RecipeHomeComponent, QuickAddComponent, RecipeDisplayComponent],
+  declarations: [AppComponent, TaskDisplayComponent, DashboardComponent, NavBarComponent, HomeComponent, RecipeHomeComponent, QuickAddComponent, RecipeDisplayComponent, RecipeImageCardComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, BrowserAnimationsModule, MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule, LayoutModule, MatToolbarModule, MatSidenavModule, MatListModule, MatInputModule, MatSelectModule, MatRadioModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [QuickAddComponent]
 })
 export class AppModule {}
