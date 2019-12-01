@@ -3,12 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RecipeDisplayComponent } from './recipe-display/recipe-display.component';
 import { QuickAddService } from './services/quick-add.service';
+import { RecipeHomeComponent } from './recipe-home/recipe-home.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent},
   { path: 'newentry', component: QuickAddService},
   { path: 'recipe-display', component: RecipeDisplayComponent},
   { path: 'recipe/:id', component: RecipeDisplayComponent},
+  { path: 'recipe-home', component: RecipeHomeComponent},
   // { path: 'update/:id', component: },  //This will be the path to update a recipe
   // { path: 'recipedisplay', component: RecipeDisplayComponent},  //**delete */
   // { path: '', redirectTo: 'recipedisplay', pathMatch: 'full'}  //**delete */
