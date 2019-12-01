@@ -1,3 +1,4 @@
+//MODULES
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
@@ -17,6 +18,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 
+//COMPONENTS
 import { AppComponent } from "./app.component";
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FullFormComponent } from './full-form/full-form.component';
@@ -26,7 +28,6 @@ import { QuickAddComponent } from './quick-add/quick-add.component';
 import { RecipeDisplayComponent } from './recipe-display/recipe-display.component';
 import { RecipeHomeComponent } from './recipe-home/recipe-home.component';
 import { RecipeImageCardComponent } from './recipe-image-card/recipe-image-card.component';
-
 
 @NgModule({
   declarations: [AppComponent, DashboardComponent, FullFormComponent,  HomeComponent, NavBarComponent, QuickAddComponent, RecipeDisplayComponent, RecipeHomeComponent, RecipeImageCardComponent],
