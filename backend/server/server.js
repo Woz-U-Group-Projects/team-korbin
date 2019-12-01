@@ -1,5 +1,5 @@
 // require('.models/db');
-// require('./task.model');
+// require('./recipe.model');
 
 var express = require('express');
 var path = require('path');
@@ -26,7 +26,7 @@ mongoose.connect(dbConfig.db, {
 // });
 
 //Setting up port with express.js
-const taskRoute = require('./backend/routes/task.route')
+const recipeRoute = require('./backend/routes/recipe.route')
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -35,7 +35,7 @@ app.use(bodyParser.urlencoded({
 app.use(cors());
 app.use(express.static(path.join(_dirname,'dist/recipeapp-dev')));
 app.use('/', express.static(path.join(_dirname,'dist/recipeapp-dev')));
-app.use('/api', taskRoute)
+app.use('/api', recipeRoute)
 
 //Create port
 const port = process.env.PORT || 4000;
@@ -55,7 +55,7 @@ app.use(function (err, req, res, next) {
     res.status(err.statusCode).send(err.message); //All HTTP requests must have a 
 });
 
-//const taskSchema = require('.models/tasks');
+//const recipeSchema = require('.models/recipes');
 
 //var app = express();
 
@@ -67,4 +67,4 @@ app.use(function (err, req, res, next) {
 //     console.log('Express server started at port : 3000');
 // });
 
-// app.use('/task', taskSchema)};
+// app.use('/recipe', recipeSchema)};
