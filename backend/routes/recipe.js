@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const recipeRoute = express.Router();
-const recipeModel = require("./models/recipe");
+const recipeModel = require("../models/recipe");
 
 //POST Create Recipe
 recipeRoute.route('/create').post((req, res, next) => {

@@ -5,12 +5,12 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
-var cors = require("./cors");
-var models = require("./models");
+var cors = require("cors");
+//var models = require("./backend/models");
 
 //pulling in routes
-var indexRouter = require("./routes/index");
-var recipeRouter = require("./routes/recipe");
+var indexRouter = require("./backend/routes/index");
+var recipeRouter = require("./backend/routes/recipe");
 //var usersRouter = require("./routes/users");
 
 //start express
@@ -32,7 +32,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-//app.use(cors());
+app.use(cors());
 
 //mounting index and tasks router
 app.use('/', indexRouter);
