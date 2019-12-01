@@ -10,7 +10,7 @@ var models = require("./models");
 
 //pulling in routes
 var indexRouter = require("./routes/index");
-var tasksRouter = require("./routes/tasks");
+var recipeRouter = require("./routes/recipe");
 //var usersRouter = require("./routes/users");
 
 //start express
@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 //mounting index and tasks router
 app.use('/', indexRouter);
-app.use("/tasks", tasksRouter);
+app.use("/recipe", recipeRouter);
 //app.use("/users", usersRouter);
 
 //catch 404 and forward to error handler
