@@ -1,8 +1,0 @@
-<h3>List of tasks</h3>
-<input [(ngModel)]="newTask.name" /><button (click)="addTask()">add</button>
-<ul>
-  <li *ngFor="let task of tasks">
-    {{ task.id }} : {{ task.name }} :
-    {{ task.complete ? "complete" : "not complete" }}
-  </li>
-</ul>
