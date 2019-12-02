@@ -1,0 +1,269 @@
+db.recipe_app.insertMany([{
+category: "Appetizer", 
+name: "Bacon Blue Cheese App", 
+ingredients: ["1 wedge (8 ounces) blue cheese",
+		    "1 tablespoon honey",
+		    "3 bacon strips, cooked and crumbled",
+		    "Assorted crackers"
+], 
+directions: "Place cheese on a serving dish. Drizzle with honey. Sprinkle with bacon. Serve with crackers.",
+},
+{
+category: "Appetizer",
+name: "Greek Garden App",
+ingredients: ["1 carton (8 ounces) spreadable garden vegetable cream cheese",
+		    "2 cups crumbled feta cheese",
+		    "1/4 cup plain yogurt",
+		    "1/2 teaspoon minced garlic",
+		    "1/4 teaspoon dried oregano",
+		    "1/4 teaspoon pepper",
+		    "1-1/2 cups chopped cucumber",
+		    "1 cup chopped seeded tomatoes",
+		    "1/4 cup chopped green onions",
+		    "2 tablespoons sliced ripe olives",
+		    "Miniature pita pockets"
+],
+directions: "In a large bowl, combine the cream cheese, feta, yogurt, garlic, oregano and pepper. Spread into a 9-in. pie plate. Sprinkle the cucumber, tomatoes, onions and olives over the cream cheese mixture. Serve with pita bread. Refrigerate leftovers.",
+recipeNutritionFacts: "1/4 cup: 92 calories, 7g fat (5g saturated fat), 21mg cholesterol, 223mg sodium, 2g carbohydrate (1g sugars, 1g fiber), 3g protein.",
+recipeComments: [""]
+},
+{
+category: "Appetizer",
+name: "Tortellini App",
+ingredients: ["4 garlic cloves, peeled",
+		    "2 tablespoons olive oil, divided",
+		    "1 package (9 ounces) refrigerated spinach tortellini",
+		    "1 cup mayonnaise",
+		    "1/4 cup grated Parmesan cheese",
+		    "1/4 cup milk",
+		    "1/4 cup prepared pesto",
+		    "1/8 teaspoon pepper",
+		    "1 pint grape tomatoes",
+		    "26 frilled toothpicks"
+],
+directions: "Place garlic cloves on a double thickness of heavy-duty foil; drizzle with 1 tablespoon oil. Wrap foil around garlic. Bake at 425 degrees  for 20-25 minutes or until tender. Cool for 10-15 minutes. Meanwhile, cook tortellini according to package directions; drain and rinse in cold water. Toss with remaining oil; set aside. In a small bowl, combine the mayonnaise, cheese, milk, pesto and pepper. Mash garlic into pesto mixture; stir until combined. Alternately thread tortellini and tomatoes on to toothpicks. Serve with pesto dip. Refrigerate leftovers.",
+recipeNutritionFacts: "2 appetizers: 246 calories, 20g fat (4g saturated fat), 19mg cholesterol, 249mg sodium, 11g carbohydrate (1g sugars, 1g fiber), 5g protein.",
+recipeComments: [""]
+},
+{
+category: "Appetizer",
+name: "Asparagus Appetizer Roll Ups",
+ingredients: ["1 container (8 ounces) spreadable cream cheese",
+		    "8 bacon strips, cooked and crumbled",
+		    "2 tablespoons chopped green onion",
+		    "12 slices white bread, crusts removed",
+		    "24 fresh asparagus spears, trimmed",
+		    "1/4 cup butter, melted",
+		    "3 tablespoons grated Parmesan cheese"
+],
+directions: {"In a small bowl, combine the cream cheese, bacon and green onion. Flatten bread slices with a rolling pin; spread tops with cream cheese mixture. Trim asparagus 2 in. longer than bread. Place two spears on each slice; roll up bread and place seam side down on a greased baking sheet. Brush with butter; sprinkle with Parmesan cheese. Bake at 400 degrees for 10-12 minutes or until lightly browned. Serve immediately.",
+},
+{
+category: "Appetizer",
+name: "Garlic Mushroom App",
+ingredients: ["1 cup chopped onion",
+		    "1/2 cup canola oil",
+		    "3 tablespoons butter",
+		    "2 pounds fresh mushrooms, sliced",
+		    "1 can (28 ounces) crushed tomatoes in puree, undrained",
+		    "1 teaspoon salt",
+		    "1/4 teaspoon pepper",
+		    "1/2 cup red wine vinegar",
+		    "1 bunch fresh parsley, finely chopped (about 1-1/2 cups)",
+		    "3 garlic cloves, minced",
+		    "Sliced French bread"
+],
+directions: "In a large saucepan, saute onion in oil and butter until crisp-tender. Add mushrooms; cook for 2 minutes or until vegetables are tender. Add the tomatoes, salt and pepper; cover and simmer for 20-30 minutes. Stir in the vinegar, parsley and garlic. Cover and simmer for 10 minutes. Cover and refrigerate for several hours or overnight. To serve, spoon onto slices of French bread.",
+recipeNutritionFacts: "2 tablespoons: 118 calories, 9g fat (2g saturated fat), 6mg cholesterol, 240mg sodium, 8g carbohydrate (1g sugars, 2g fiber), 3g protein.",
+recipeComments: [""]
+}]
+);
+{
+id: “null”,
+category: "Entree", 
+name: "German-Style Pot Roast", 
+ingredients: [{ “4 thick-sliced bacon strips", "1 pound baby Yukon Gold potatoes", "4 medium carrots, sliced", "1 can (14 ounces) sauerkraut, rinsed, and well drained", “3/4 cup chopped dill pickles”, “1 teaspoon smoked paprika”, “1 teaspoon ground allspice”, “1/2 teaspoon kosher salt”, “1/2 teaspoon pepper”, “1 boneless beef chuck roast (3 pounds)”, “2 packages (14.4 ounces each) frozen pearl onions, thawed”, “4 garlic cloves, minced”, “1/2 cup stout beer or beef broth”, “1/3 cup Dusseldorf mustard”, “1/2 cup sour cream”, “1/2 cup minced fresh parsley”
+}], 
+directions: "In a large skillet, cook bacon over medium heat until crisp. Remove to paper towels to drain.
+Meanwhile, place potatoes, carrots, sauerkraut and pickles in a 7-qt. slow cooker. Mix paprika, allspice, salt and pepper; rub over roast. Brown roast in drippings over medium heat. Transfer to slow cooker. Add onions and garlic to drippings; cook and stir 1 minute. Stir in beer and mustard; pour over meat. Crumble bacon; add to slow cooker. Cook, covered, on low until meat and vegetables are tender, 6-8 hours. Remove roast; let stand 10 minutes before slicing. Strain cooking juices. Reserve vegetables and juices; skim fat. Return reserved vegetables and cooking juices to slow cooker. Stir in sour cream; heat through. Serve with roast; sprinkle with parsley.”
+},
+{
+id: “null”
+category: "Entree",
+name: "Artichoke & Spinach Chicken Casserole",
+ingredients: [
+{"3 cups uncooked bow tie pasta”, “2 tablespoons butter”, “1/2 pound sliced fresh mushrooms”, “1 medium onion, chopped”, “2 large eggs”, “1-1/2 cups 2% milk”, “1 teaspoon Italian seasoning”, “1/2 teaspoon salt”, “1/4 teaspoon pepper”, “1/4 to 1/2 teaspoon crushed red pepper flakes”, “3 cups cubed cooked chicken”, “1 can (14 ounces) water-packed quartered artichoke hearts, rinsed and drained”, “1 package (10 ounces) frozen chopped spinach, thawed and squeezed dry”,
+“2 cups shredded Monterey Jack cheese”, “2 tablespoons grated Parmesan cheese”}
+],
+directions: “Preheat oven to 350°. Cook pasta according to package directions; drain.
+In a large skillet, heat butter over medium-high heat; saute mushrooms and onion until tender. Remove from heat.
+In a large bowl, whisk together eggs, milk and seasonings. Stir in chicken, artichoke hearts, spinach, cheeses and mushroom mixture. Stir in pasta.
+Transfer to a greased 13x9-in. baking dish. Bake, covered, 40 minutes.
+Mix topping ingredients; sprinkle over casserole. Bake, uncovered, until bubbly and topping is golden brown, 5-10 minutes.”
+},
+{
+id: “null”
+category: "Entree",
+name: “Salmon with Tomato-Goat Cheese Couscous”,
+Ingredients: [{“4 salmon fillets (5 ounces each)”, “1/4 teaspoon salt”, “1/4 teaspoon garlic salt”, “1/4 teaspoon pepper”, “1 tablespoon olive oil”, “1 cup chicken stock”, “3/4 cup uncooked whole wheat couscous”, “2 plum tomatoes, chopped”, “4 green onions, chopped”, “1/4 cup crumbled goat cheese”
+}],
+directions: “Sprinkle salmon with salt, garlic salt and pepper. Heat oil in a large skillet over medium-high heat; add salmon skin side up and cook 3 minutes. Turn fish and cook an additional 4 minutes or until fish flakes easily with a fork. Remove from heat and keep warm.
+In a large saucepan, bring stock to a boil. Stir in couscous. Remove from heat; let stand, covered, until stock is absorbed, about 5 minutes. Stir in tomatoes, green onions and goat cheese. Serve with salmon.”
+},
+{
+id: “null”
+category: "Entree",
+name: “Mushroom and Brown Rice Hash with Poached Eggs”,
+Ingredients: [{“2 tablespoons olive oil”, “1 pound sliced baby portobello mushrooms”, “1/2 cup chopped sweet onion”, “1 package (8.8 ounces) ready-to-serve brown rice”, “1 large carrot, grated”, “2 green onions, thinly sliced”, “1/2 teaspoon salt”, “1/4 teaspoon pepper”, “1/4 teaspoon caraway seeds
+4 large eggs”
+}],
+directions: “In a large skillet, heat oil over medium-high heat; saute mushrooms until lightly browned, 5-7 minutes. Add sweet onion; cook 1 minute. Add rice and carrots; cook and stir until vegetables are tender, 4-5 minutes. Stir in green onions, salt, pepper and caraway seeds; heat through.
+Meanwhile, place 2-3 in. of water in a large saucepan or skillet with high sides. Bring to a boil; adjust heat to maintain a gentle simmer. Break cold eggs, one at a time, into a small bowl; holding bowl close to surface of water, slip egg into water.
+Cook, uncovered, until whites are completely set and yolks begin to thicken but are not hard, 3-5 minutes. Using a slotted spoon, lift eggs out of water. Serve over rice mixture.”
+},
+{
+id: “null”
+category: "Entree",
+name: “Country French Pork with Prunes and Apples”,
+
+Ingredients: [{“2 tablespoons all-purpose flour”, “1 tablespoon herbes de Provence”, “1-1/2 teaspoons salt”, “3/4 teaspoon pepper”, “1 boneless pork loin roast (3 to 4 pounds)”, “2 tablespoons olive oil”, “2 medium onions, halved and thinly sliced”, “1 cup apple cider or unsweetened apple juice”, “1 cup beef stock”, “2 bay leaves”, “2 large tart apples, peeled, cored and chopped”, “1 cup pitted dried plums”
+}],
+directions: “Mix flour, herbes de Provence, salt and pepper; rub over pork. In a large skillet, heat oil over medium-high heat. Brown roast on all sides. Place roast in a 5- or 6-qt. slow cooker. Add onions, apple cider, beef stock and bay leaves.
+Cook, covered, on Low for 3 hours. Add apples and dried plums. Cook, covered, on low 1 to 1-1/2 hours longer or until apples and pork are tender. Remove roast, onions, apples and plums to a serving platter, discarding bay leaves; tent with foil. Let stand 15 minutes before slicing.”
+},
+{
+id: “null”
+category: "Dessert",
+name: “Apple Cream Cheese Tart”,
+ingredients: [{“3 tablespoons butter, softened”, “3 tablespoons sugar”, “1/4 teaspoon vanilla extract”, “6 tablespoons all-purpose flour”,
+“FILLING: 3 ounces cream cheese, softened”, “2 tablespoons beaten egg”, “1/4 teaspoon vanilla extract”, “2/3 cup thinly sliced peeled tart apple (1/8-inch slices)”, “2 teaspoons sugar”, “1/4 teaspoon ground cinnamon”, “2 tablespoons slivered almonds”, “Whipped cream and ground nutmeg, optional”
+}],
+directions: “In a small bowl, cream butter and sugar; beat in vanilla. Stir in flour. Press onto the bottom and 1 in. up the sides of a 6-in. springform pan coated with cooking spray; set aside.
+For filling, in a small bowl, beat the cream cheese, egg and vanilla. Pour over crust. In a bowl, combine the apple, sugar and cinnamon; arrange over filling. Sprinkle with almonds.
+Place pan on a baking sheet. Bake at 350° for 30-35 minutes or until apples are tender. Cool on a wire rack. Remove sides of pan. Garnish with whipped cream and nutmeg if desired. Refrigerate leftovers.”
+},
+{
+id: “null”
+category: "Dessert",
+name: “Brown Sugar & Chocolate Swirl Cheesecake”,
+ingredients: [{“3/4 cup cinnamon graham cracker crumbs (about 4 whole crackers)”, “3/4 cup finely chopped walnuts, divided”, “1 tablespoon sugar”, “3 tablespoons butter, melted”, “FILLING:”, “1/2 cup heavy whipping cream”, “1 cup (6 ounces) semisweet chocolate chips”, “4 packages (8 ounces each) cream cheese, softened”, “3/4 cup packed brown sugar”, “1/2 cup sour cream”, “3 tablespoons all-purpose flour”, “1 teaspoon vanilla extract”, “1/4 teaspoon salt”, “1/4 cup maple syrup, divided”, “3 large eggs, room temperature, lightly beaten”, “TOPPING:”, “2 cups sweetened whipped cream”
+}],
+directions:
+“Preheat oven to 350°. Wrap a double thickness of heavy-duty foil (about 18 in. square) around a greased 9-in. springform pan. Combine cracker crumbs, 1/2 cup walnuts and sugar; stir in butter. Press onto bottom and 1 in. up sides of prepared pan and place on a baking sheet. Bake 10 minutes. Cool on a wire rack.
+In a small saucepan, bring cream just to a boil. Pour over chocolate; whisk until smooth. Cool.
+Beat cream cheese until smooth. Add next 5 ingredients and 2 tablespoons maple syrup; beat until well blended. Add eggs; beat on low speed until combined. Pour over prepared crust, reserving 3 tablespoons of batter. Mix reserved cheesecake batter into cooled chocolate; drop spoonfuls over filling. Cut through batter and chocolate with a knife to swirl.
+Place springform pan in a larger baking pan; add 1 in. of hot water to larger pan. Bake until center is just set but still jiggles when shaken, 50-65 minutes. Remove springform pan from water bath. Cool cheesecake on a wire rack 10 minutes. Loosen sides from pan with a knife; remove foil. Cool 1 hour longer. Refrigerate overnight, covering when completely cooled.
+Remove rim from pan. Serve with whipped cream. Sprinkle with remaining walnuts; drizzle with remaining syrup.”
+},
+{
+id: “null”
+category: "Dessert",
+name: “Apple Cream Cheese Tart”,
+ingredients: [{“3 tablespoons butter, softened”, “3 tablespoons sugar”, “1/4 teaspoon vanilla extract”, “6 tablespoons all-purpose flour”, “FILLING:”, “3 ounces cream cheese, softened”, “2 tablespoons beaten egg”, “1/4 teaspoon vanilla extract”, “2/3 cup thinly sliced peeled tart apple (1/8-inch slices)”, “2 teaspoons sugar”, “1/4 teaspoon ground cinnamon”, “2 tablespoons slivered almonds”, “Whipped cream and ground nutmeg, optional”
+}],
+directions: “In a small bowl, cream butter and sugar; beat in vanilla. Stir in flour. Press onto the bottom and 1 in. up the sides of a 6-in. springform pan coated with cooking spray; set aside.
+For filling, in a small bowl, beat the cream cheese, egg and vanilla. Pour over crust. In a bowl, combine the apple, sugar and cinnamon; arrange over filling. Sprinkle with almonds.
+Place pan on a baking sheet. Bake at 350° for 30-35 minutes or until apples are tender. Cool on a wire rack. Remove sides of pan. Garnish with whipped cream and nutmeg if desired. Refrigerate leftovers.”
+},
+{
+id: “null”
+category: "Dessert",
+name: “Brown Sugar & Chocolate Swirl Cheesecake”,
+ingredients: [{“3/4 cup cinnamon graham cracker crumbs (about 4 whole crackers)”, “3/4 cup finely chopped walnuts, divided”, “1 tablespoon sugar”, “3 tablespoons butter, melted”, “FILLING:”, “1/2 cup heavy whipping cream”, “1 cup (6 ounces) semisweet chocolate chips”, “4 packages (8 ounces each) cream cheese, softened”, “3/4 cup packed brown sugar”, “1/2 cup sour cream”, “3 tablespoons all-purpose flour”, “1 teaspoon vanilla extract”, “1/4 teaspoon salt”, “1/4 cup maple syrup, divided”, “3 large eggs, room temperature, lightly beaten”, “TOPPING:”, “2 cups sweetened whipped cream”
+}],
+directions: “Preheat oven to 350°. Wrap a double thickness of heavy-duty foil (about 18 in. square) around a greased 9-in. springform pan. Combine cracker crumbs, 1/2 cup walnuts and sugar; stir in butter. Press onto bottom and 1 in. up sides of prepared pan and place on a baking sheet. Bake 10 minutes. Cool on a wire rack.
+In a small saucepan, bring cream just to a boil. Pour over chocolate; whisk until smooth. Cool.
+Beat cream cheese until smooth. Add next 5 ingredients and 2 tablespoons maple syrup; beat until well blended. Add eggs; beat on low speed until combined. Pour over prepared crust, reserving 3 tablespoons of batter. Mix reserved cheesecake batter into cooled chocolate; drop spoonfuls over filling. Cut through batter and chocolate with a knife to swirl.
+Place springform pan in a larger baking pan; add 1 in. of hot water to larger pan. Bake until center is just set but still jiggles when shaken, 50-65 minutes. Remove springform pan from water bath. Cool cheesecake on a wire rack 10 minutes. Loosen sides from pan with a knife; remove foil. Cool 1 hour longer. Refrigerate overnight, covering when completely cooled.
+Remove rim from pan. Serve with whipped cream. Sprinkle with remaining walnuts; drizzle with remaining syrup.”
+},
+{
+id: “null”
+category: "Dessert",
+name: “Butterscotch Peanut Butter Fudge”,
+ingredients: [{“1 teaspoon plus 1/2 cup butter, divided”, “1 package (11 ounces) butterscotch chips”, “1 cup creamy peanut butter”, “2 cups miniature marshmallows”, “1/2 cup chopped unsalted peanuts”
+}],
+directions: “Line an 11x7-in. pan with foil and grease the foil with 1 teaspoon butter; set aside.
+In a large saucepan, combine the butterscotch chips, peanut butter and remaining butter. Cook and stir over medium heat until melted. Remove from the heat; stir in marshmallows until smooth. Spread into prepared pan; sprinkle with peanuts. Chill until firm.
+Using foil, lift fudge out of pan. Discard foil; cut fudge into 1-in. squares. Store in an airtight container.”
+},
+{
+id: “null”
+category: "Dessert",
+name: “Orange and Pear Upside-Down Cake”,
+ingredients: [{“1/2 cup butter, cubed”, “1/2 cup packed brown sugar”, “2 medium ripe pears, peeled and quartered”, “2 tablespoons grated orange zest, divided”, “2/3 cup sugar”, “1/3 cup coconut oil”, “1 large egg, room temperature”, “1-1/3 cups all-purpose flour”, “1-1/2 teaspoons baking powder”, “1/2 teaspoon salt”, “3/4 cup half-and-half cream”
+}],
+directions: “Preheat oven to 350°. Place butter in a 10-in. cast-iron or other ovenproof skillet; place pan in oven until butter is melted, 3-5 minutes. Carefully tilt pan to coat bottom and sides with butter. Sprinkle with brown sugar and 1 tablespoon orange zest. Arrange pears in a single layer over sugar.
+In a large bowl, beat sugar, coconut oil, egg and remaining 1 tablespoon orange zest until well blended. In another bowl, whisk flour, baking powder and salt; gradually beat into sugar mixture alternately with cream.
+Spoon over pears. Bake until a toothpick inserted in center comes out clean, 45-50 minutes. Cool 10 minutes before inverting onto a serving plate. Serve warm.”
+},
+{
+id: “null”
+category: "Dessert",
+name: “Peach Cobbler Cookies”,
+ingredients: [{“1 cup butter, softened”, “1 cup sugar”, “1/3 cup packed brown sugar”, “1 large egg, room temperature”, “1 teaspoon vanilla extract”, “1/4 teaspoon almond extract”, “3 cups all-purpose flour”, “1-1/2 teaspoons ground cinnamon”, “1 teaspoon cream of tartar”, “1 teaspoon baking soda”, “1/2 teaspoon salt”, “1/4 teaspoon ground nutmeg”, “1 cup chopped peeled fresh peaches”
+}],
+directions: “Preheat oven to 350°. In a large bowl, cream butter and sugar until light and fluffy. Beat in egg and extracts. In another bowl, whisk flour, cinnamon, cream of tartar, baking soda, salt and nutmeg; gradually beat into creamed mixture. Stir in peaches.
+Drop dough by tablespoonfuls 2 in. apart onto parchment-lined baking sheets. Bake until set, 14-16 minutes. Cool on pans 2 minutes. Remove to wire racks to cool. Store in an airtight container.”
+},
+{
+id: “null”
+category: "Drink",
+name: “Manhattan”,
+ingredients: [{“2 oz Bourbon or rye”, “1 oz Sweet vermouth”, “2 dashes Angostura bitters”, “1 dash Orange bitters”, “Garnish: Brandied cherry”
+}],
+directions: “Add all the ingredients into a mixing glass with ice, and stir until well-chilled.
+Strain into a chilled coupe.
+Garnish with a brandied cherry.”
+},
+{
+id: “null”
+category: "Drink",
+name: “Gimlet”,
+ingredients: [{“2 1⁄2 oz Gin”, “1⁄2 oz Fresh lime juice”, “1⁄2 oz Simple syrup”, “Garnish: Lime wheel”
+}],
+directions: “Add all ingredients into a shaker with ice and shake.
+Strain into a chilled cocktail glass or an Old Fashioned glass filled with fresh ice.
+Garnish with a lime wheel.
+(You can substitute 1 oz lime cordial, such as Rose's lime juice, for both the lime juice and simple syrup.).”
+},
+{
+id: “null”
+category: "Drink",
+name: “Mint Julep”,
+ingredients: [{“1⁄4 oz Simple syrup”, “8 Mint leaves”, “2 oz Bourbon”, “Garnish: Bitters, Mint sprig”
+}],
+directions: “In a Julep cup or rocks glass, lightly muddle the mint and syrup.
+Add the bourbon and pack tightly with crushed ice.
+Stir until the cup is frosted on the outside.
+Top with more crushed ice to form an ice dome and garnish with a mint sprig and few optional drops of bitters.”
+},
+{
+id: “null”
+category: "Drink",
+name: “Old Fashioned”,
+ingredients: [{“2 oz Bourbon”, “1⁄2 tsp White sugar”, “3 dashes Angostura bitters”, “1 dash Regan's Orange Bitters No. 6”, “1⁄4 oz Cold water”, “1 Brown sugar cube”, “Garnish: Lemon, Orange twists”
+}],
+directions: “Add all ingredients into a mixing glass, muddle to break down the sugar and stir briefly.
+Fill with ice and stir again.
+Strain into a rocks glass over ice.
+Twist slices of lemon and orange peel over the drink to express the oil and drop them in.”
+},
+{
+id: “null”
+category: "Drink",
+name: “Bloody Mary”,
+ingredients: [
+{“1 Lemon wedge”, “1 Lime wedge”, “2 oz Vodka”, “4 oz Tomato juice”, “2 dashes Tabasco  sauce”, “2 tsp Prepared horseradish”, “2 dashes Worcestershire sauce”, “1 pinch Celery salt”, “1 pinch Ground black pepper”, “1 pinch smoked paprika”, “Garnish: Lime wedge, Green olives, Parsley sprig, Celery stalk”
+}],
+directions: “Pour some celery salt onto a small plate.
+Rub the juicy side of the lemon or lime wedge along the lip of a pint glass.
+Roll the outer edge of the glass in celery salt until fully coated.
+Fill with ice and set aside.
+Squeeze the lemon and lime wedges into a shaker and drop them in.
+Add the remaining ingredients and ice and shake gently.
+Strain into the prepared glass.
+Garnish with a parsley sprig, 2 speared green olives and a lime wedge and a celery stalk (optional).”
+ }
+}])
+

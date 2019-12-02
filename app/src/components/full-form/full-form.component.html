@@ -1,0 +1,85 @@
+<form [formGroup]="fullForm" routerLink="/newentry" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="full-form-card">
+    <mat-card-header>
+      <mat-card-title>Add A Full Recipe</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Recipe Name" formControlName="recipe">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Enter the first ingredient" formControlName="addIngredientOne" [(ngModel)]="addIngredientOne" >
+            <mat-error *ngIf="fullForm.controls['addIngredientOne'].hasError('required')">
+              You must enter at least <strong>1 ingredient</strong>.
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field>
+            <input matInput type="number" placeholder="Quantity amount" [(ngModel)]="addQtyOne" formControlName="addQtyOne" min="1">
+          </mat-form-field>
+          <span> - </span>
+          <mat-form-field>
+                <mat-label>Select measurement</mat-label>
+                <mat-select [(value)]="ingQty">
+                  <mat-option>None</mat-option>
+                  <mat-option value="tsp">tsp</mat-option>
+                  <mat-option value="tbl">tbl</mat-option>
+                  <mat-option value="oz">oz</mat-option>
+                  <mat-option value="lb">lb</mat-option>
+                  <mat-option value="cup">cup</mat-option>
+                  <mat-option value="qt">qt</mat-option>
+                  <mat-option value="pt">pt</mat-option>
+                  <mat-option value="gal">gal</mat-option>
+                  <mat-option value="cnt">cnt</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <!-- Add a button here that will populate the ingredient entry and submit when clicked -->
+              <button mat-button> + {{addIngredientOne}} {{addQtyOne}} {{ingQty}}</button>
+            </div>
+      </div>
+      <!-- <div class="row" *ngIf="!hasMoreIngredients">
+        <div class="col">
+          <button mat-button type="button" (click)="hasMoreIngredients = !hasMoreIngredients">
+            + Add more ingredients
+          </button>
+        </div>
+      </div> -->
+      <div class="row" *ngIf="hasMoreIngredients">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <textarea matInput placeholder="Next ingredient" formControlName="addNextIngredient"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Recipe Directions" formControlName="recipeDirections">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-radio-group formControlName="selectCat">
+            <mat-radio-button value="entree">Entree</mat-radio-button>
+            <mat-radio-button value="appetizer">Appetizer</mat-radio-button>
+            <mat-radio-button value="dessert">Dessert</mat-radio-button>
+            <mat-radio-button value="drink">Drink</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="" type="reset" >Cancel</button>
+      <button mat-raised-button color="primary" type="button">Add Recipe & Add Directions</button>
+      <button mat-raised-button color="primary" type="submit">Add Recipe</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
