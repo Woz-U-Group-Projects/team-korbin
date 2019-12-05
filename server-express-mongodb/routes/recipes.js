@@ -8,9 +8,14 @@ router.get("/", function(req, res, next) {
 
 router.post("/", function(req, res, next) {
   let newRecipe = new RecipeModel();
-  newRecipe.name = req.body.name;
-  newRecipe.complete = req.body.complete;
-  newRecipe.save().then(recipe => res.json(recipe));
+  // newRecipe.recipeId = req.parms.id;
+  newRecipe.recipeName = req.body.recipeName;
+  newRecipe.complete = req.body.complete = true;
+  newRecipe.save()
+  .catch(err => {
+    res.status(400).send("Unable to save data to database on POST.  Error: " + err );
+  })
+  .then(recipe => res.json(recipe))
 });
 
 router.delete("/:id", function(req, res, next) {
@@ -24,7 +29,7 @@ router.put("/:id", function(req, res, next) {
   RecipeModel.findByIdAndUpdate(
     req.params.id,
     {
-      name: req.body.name,
+      recipeName: req.body.recipeName,
       complete: req.body.complete
     },
     { new: true },

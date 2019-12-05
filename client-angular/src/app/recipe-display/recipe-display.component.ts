@@ -12,14 +12,21 @@ export class RecipeDisplayComponent implements OnInit {
   newRecipe: Recipe = new Recipe();
   recipes: Recipe[] = [];
 
+  
   getRecipes() {
     this.recipeService.getRecipes().subscribe(recipes => (this.recipes = recipes));
   }
-
+  
   addRecipe() {
+    const recipeName = this.newRecipe.recipeName;
+    const id = this.newRecipe.id;
+    id + 1;
+
     this.recipeService.addRecipe(this.newRecipe).subscribe(newRecipe => {
       newRecipe = new Recipe();
-      newRecipe.name = name;
+      newRecipe.id = id;
+      newRecipe.recipeName = recipeName;
+      // newRecipe.category = category;
       newRecipe.complete = true;
       this.getRecipes();
     });

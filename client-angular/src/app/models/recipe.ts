@@ -1,5 +1,6 @@
 export class Recipe {
-  id: string;
-  name: string;
+  id: number;
+  recipeName: string;
+  category: string;
   complete: boolean;
 }

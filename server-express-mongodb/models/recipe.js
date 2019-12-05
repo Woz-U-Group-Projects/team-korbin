@@ -4,8 +4,9 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var RecipeSchema = new Schema({
-  name: { type: String, required: true },
-  complete: { type: Boolean, required: true }
+  recipeId: { type: Number, required: false },
+  recipeName: { type: String, required: true },
+  complete: { type: Boolean, required: false }
 });
 
 // Duplicate the ID field.
