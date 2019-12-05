@@ -1,0 +1,10 @@
+<h3>List of recipes</h3>
+<input [(ngModel)]="newRecipe.name" /><button (click)="addRecipe()">add</button>
+<ul>
+  <li *ngFor="let recipe of recipes">
+    Name: {{ recipe.recipeName }} <br>
+    Category: {{recipe.category}} <br>
+    Directions: {{recipe.directions}}
+    {{ recipe.complete ? "complete" : "not complete" }}
+  </li>
+</ul>

@@ -1,36 +1,36 @@
 var express = require("express");
 var router = express.Router();
-var TaskModel = require("../models/task");
+var RecipeModel = require("../models/recipe");
 
 router.get("/", function(req, res, next) {
-  TaskModel.find().then(tasks => res.json(tasks));
+  RecipeModel.find().then(recipes => res.json(recipes));
 });
 
 router.post("/", function(req, res, next) {
-  let newTask = new TaskModel();
-  newTask.name = req.body.name;
-  newTask.complete = req.body.complete;
-  newTask.save().then(task => res.json(task));
+  let newRecipe = new RecipeModel();
+  newRecipe.name = req.body.name;
+  newRecipe.complete = req.body.complete;
+  newRecipe.save().then(recipe => res.json(recipe));
 });
 
 router.delete("/:id", function(req, res, next) {
-  TaskModel.findByIdAndRemove(req.params.id, (err, task) => {
+  RecipeModel.findByIdAndRemove(req.params.id, (err, recipe) => {
     if (err) return res.status(400).send(err);
-    res.send(task);
+    res.send(recipe);
   });
 });
 
 router.put("/:id", function(req, res, next) {
-  TaskModel.findByIdAndUpdate(
+  RecipeModel.findByIdAndUpdate(
     req.params.id,
     {
       name: req.body.name,
       complete: req.body.complete
     },
     { new: true },
-    (err, task) => {
+    (err, recipe) => {
       if (err) return res.status(400).send(err);
-      res.send(task);
+      res.send(recipe);
     }
   );
 });

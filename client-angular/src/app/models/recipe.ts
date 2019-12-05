@@ -1,4 +1,4 @@
-export class Task {
+export class Recipe {
   id: string;
   name: string;
   complete: boolean;

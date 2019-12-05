@@ -5,7 +5,7 @@ var logger = require("morgan");
 var cors = require("cors");
 var mongoose = require("mongoose");
 
-var tasksRouter = require("./routes/tasks");
+var recipesRouter = require("./routes/recipes");
 
 var app = express();
 
@@ -16,15 +16,15 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 
-app.use("/tasks", tasksRouter);
+app.use("/recipes", recipesRouter);
 
 //var mongoDB = "mongodb://127.0.0.1/database";
 var mongoDB =
-  "mongodb+srv://ammon:Password1%21@cluster0-lhvh5.mongodb.net/test?retryWrites=true&w=majority";
-mongoose.connect(mongoDB, { useNewUrlParser: true });
+  "mongodb+srv://admin:mjvx4KdK6XHEPKbl@cluster0-4c7hh.mongodb.net/test?retryWrites=true&w=majority";
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
-db.on("connected", () => console.log(`Mongoose connection open to ${mongoDB}`));
+db.on("connected", () => console.log(`Mongoose connection open to |add> test db successfull. `)); // ${mongoDB}`));
 db.on("disconnected", () => console.log("Mongoose connection disconnected"));
 db.on("error", console.error.bind(console, "Mongoose connection error:"));
 
