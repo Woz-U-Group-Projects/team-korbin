@@ -1,14 +1,33 @@
-<h3>List of recipes</h3>
-<div >
-<input [(ngModel)]="newRecipe.recipeName" />
-<input type="checkbox" [(ngModel)]="newRecipe.complete" /><br>
-<button (click)="addRecipe()">add</button>
+<h2>Add New Recipe</h2>
+<div>
+  <input [(ngModel)]="newRecipe.recipeName" />
+  <input type="checkbox" [(ngModel)]="newRecipe.complete" /><br>
+  <select [(ngModel)]="newRecipe.category">
+    <option value="Appetizer">Appetizer</option>
+    <option value="Dessert">Dessert</option>
+    <option value="Drink">Drink</option>
+    <option value="Entree">Entree</option>
+  </select>
+  <button (click)="addRecipe()">add</button>
 </div>
-<ul>
-  <li *ngFor="let recipe of recipes">
-    Name: {{ recipe.recipeName }} <br>
-    Category: {{recipe.category}} <br>
-    Directions: {{recipe.directions}} <br>
-    Complete: {{ recipe.complete}}
+<div>
+  <h2>Your Recipes</h2>
+<ul class="container">
+  <li style="list-style: none;" *ngFor="let recipe of recipes">
+    <div class="card flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h3>{{recipe.recipeName}}</h3>
+          <img src="https://picsum.photos/200/200">
+          {{recipe.category}}
+        </div>
+        <div class="flip-card-back">
+          Directions: {{recipe.directions}} <br>
+          Complete: {{ recipe.complete}}<br>
+          <div><a href="#">Update</a></div><div><a href="#">View</a></div>
+        </div>
+      </div>
+    </div>
   </li>
 </ul>
+</div>
