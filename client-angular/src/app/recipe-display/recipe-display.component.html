@@ -1,4 +1,4 @@
-<h2>Add New Recipe</h2>
+<!-- <h2>Add New Recipe</h2>
 <div>
   <input [(ngModel)]="newRecipe.recipeName" />
   <input type="checkbox" [(ngModel)]="newRecipe.complete" /><br>
@@ -9,16 +9,16 @@
     <option value="Entree">Entree</option>
   </select>
   <button (click)="addRecipe()">add</button>
-</div>
+</div> -->
 <div>
   <h2>Your Recipes</h2>
-<ul class="container">
-  <li style="list-style: none;" *ngFor="let recipe of recipes">
+<ul class="container" >
+  <li style="list-style: none;" *ngFor="let recipe of recipes | slice: 1">
     <div class="card flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <h3>{{recipe.recipeName}}</h3>
           <img src="https://picsum.photos/200/200">
+          <h3>{{recipe.recipeName}}</h3>
           {{recipe.category}}
         </div>
         <div class="flip-card-back">

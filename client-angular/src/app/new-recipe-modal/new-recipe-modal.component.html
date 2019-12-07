@@ -1,0 +1,23 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{my_modal_title}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div>
+        <input [(ngModel)]="newRecipe.recipeName" />
+        <input type="checkbox" [(ngModel)]="newRecipe.complete" /><br>
+        <select [(ngModel)]="newRecipe.category">
+            <option value="Appetizer">Appetizer</option>
+            <option value="Dessert">Dessert</option>
+            <option value="Drink">Drink</option>
+            <option value="Entree">Entree</option>
+        </select>
+        <button (click)="addRecipe()">add</button>
+    </div>
+    <p> {{my_modal_content}}</p>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>

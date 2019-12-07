@@ -1,4 +1,27 @@
-<!--The content below is only a placeholder and can be replaced.-->
-
-<app-recipe-display></app-recipe-display>
-<router-outlet></router-outlet>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="">DelishUs</a>
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="new" routerLinkActive="active" (click)="open()">Add Recipe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="about" routerLinkActive="active">About</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="terms" routerLinkActive="active">Terms and Conditions</a>
+        </li> -->
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
