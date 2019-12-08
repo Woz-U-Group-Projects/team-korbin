@@ -1,33 +1,27 @@
-<!-- <h2>Add New Recipe</h2>
-<div>
-  <input [(ngModel)]="newRecipe.recipeName" />
-  <input type="checkbox" [(ngModel)]="newRecipe.complete" /><br>
-  <select [(ngModel)]="newRecipe.category">
-    <option value="Appetizer">Appetizer</option>
-    <option value="Dessert">Dessert</option>
-    <option value="Drink">Drink</option>
-    <option value="Entree">Entree</option>
-  </select>
-  <button (click)="addRecipe()">add</button>
-</div> -->
 <div>
   <h2>Your Recipes</h2>
-<ul class="container" >
-  <li style="list-style: none;" *ngFor="let recipe of recipes | slice: 1">
-    <div class="card flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img src="https://picsum.photos/200/200">
-          <h3>{{recipe.recipeName}}</h3>
-          {{recipe.category}}
-        </div>
-        <div class="flip-card-back">
-          Directions: {{recipe.directions}} <br>
-          Complete: {{ recipe.complete}}<br>
-          <div><a href="#">Update</a></div><div><a href="#">View</a></div>
+  <ul class="container">
+    <li style="list-style: none;" *ngFor="let recipe of recipes | slice: 1">
+      <div class="card flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front card">
+            <div style="width: 95%; height: auto;">
+              <img class="card-img-top" [src]="recipe.recipeImage">
+            </div>
+            <!-- <p>{{recipe.recipeImage}}</p> -->
+            <h5 class="card-title">{{recipe.recipeName}}</h5>
+            {{recipe.category}}
+          </div>
+          <div class="flip-card-back">
+            <div>
+              Directions: {{recipe.directions}}
+            </div>
+            Complete: {{ recipe.complete}}<br>
+            <div><a href="#">Update</a></div>
+            <div><a href="#">View</a></div>
+          </div>
         </div>
       </div>
-    </div>
-  </li>
-</ul>
+    </li>
+  </ul>
 </div>

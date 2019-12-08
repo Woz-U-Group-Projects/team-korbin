@@ -25,4 +25,8 @@ export class RecipeService {
   addRecipe(recipe): Observable<Recipe> {
     return this.http.post<Recipe>(this.apiUrl, recipe);
   }
+
+  // getRecipe(id): Observable<Recipe> {
+  //   return this.http.get<Recipe>(this.apiUrl + "/:id");
+  // }
 }

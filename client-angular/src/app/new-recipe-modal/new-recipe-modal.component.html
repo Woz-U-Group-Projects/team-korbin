@@ -5,16 +5,27 @@
     </button>
 </div>
 <div class="modal-body">
-    <div>
-        <input [(ngModel)]="newRecipe.recipeName" />
-        <input type="checkbox" [(ngModel)]="newRecipe.complete" /><br>
-        <select [(ngModel)]="newRecipe.category">
-            <option value="Appetizer">Appetizer</option>
-            <option value="Dessert">Dessert</option>
-            <option value="Drink">Drink</option>
-            <option value="Entree">Entree</option>
-        </select>
-        <button (click)="addRecipe()">add</button>
+    <div class="container">
+        <div class="row">
+            <div class="form-group">
+                <label for="recipeName">Name</label>
+                <input [(ngModel)]="newRecipe.recipeName" type="text" class="form-control"
+                    placeholder="My Family Recipe" />
+                <!-- <label for="ingredient">Ingredient</label>
+                    <input [(ngModel)]="newRecipe.ingredient" type="text" class="form-control" placeholder="My First Ingredient" />
+                    <label for="qty">Quantity</label>
+                    <input [(ngModel)]="newRecipe.qty" type="text" class="form-control" placeholder="My Family Recipe" /> -->
+                <input type="checkbox" [(ngModel)]="newRecipe.complete" /><br>
+                <label for="category">Category</label>
+                <select [(ngModel)]="newRecipe.category" class="form-control" aria-placeholder="Select recipe category">
+                    <option default="" value="Appetizer">Appetizer</option>
+                    <option value="Dessert">Dessert</option>
+                    <option value="Drink">Drink</option>
+                    <option value="Entree">Entree</option>
+                </select>
+                <button (click)="addRecipe()">add</button>
+            </div>
+        </div>
     </div>
     <p> {{my_modal_content}}</p>
 </div>

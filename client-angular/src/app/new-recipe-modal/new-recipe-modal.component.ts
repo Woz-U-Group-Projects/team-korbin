@@ -15,11 +15,17 @@ export class NewRecipeModalComponent implements OnInit {
   
   constructor(public activeModal: NgbActiveModal, private recipeService: RecipeService) { }
   newRecipe: Recipe = new Recipe();
+  recipes: Recipe[];
+
+  getRecipes() {
+    this.recipeService.getRecipes().subscribe(recipes => (this.recipes = recipes));
+  }
 
   addRecipe() {
     const recipeName = this.newRecipe.recipeName;
     const id = this.newRecipe.id;
     const category = this.newRecipe.category;
+    const ingredient = this.newRecipe.ingredient;
     id + 1;
 
     this.recipeService.addRecipe(this.newRecipe).subscribe(newRecipe => {
@@ -27,7 +33,9 @@ export class NewRecipeModalComponent implements OnInit {
       newRecipe.id = id;
       newRecipe.recipeName = recipeName;
       newRecipe.category = category;
+      newRecipe.ingredient = ingredient;
       newRecipe.complete = true;
+      this.getRecipes();
     });
   }
   
