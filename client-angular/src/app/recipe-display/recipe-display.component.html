@@ -1,20 +1,19 @@
 <div>
   <h2>Your Recipes</h2>
   <ul class="container">
-    <li style="list-style: none;" *ngFor="let recipe of recipes | slice: 1">
+    <li style="list-style: none;" *ngFor="let recipe of recipes | slice: -26">
       <div class="card flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front card">
-            <div style="width: 95%; height: auto;">
-              <img class="card-img-top" [src]="recipe.recipeImage">
+            <div style="width: 100%; height: 200px;">
+              <h6 class="card-header">{{recipe.recipeName}}</h6>
+              <img class="card-img img" [src]="recipe.recipeImage">
+              <div class="card-footer">{{recipe.category}}</div>
             </div>
-            <!-- <p>{{recipe.recipeImage}}</p> -->
-            <h5 class="card-title">{{recipe.recipeName}}</h5>
-            {{recipe.category}}
           </div>
           <div class="flip-card-back">
             <div>
-              Directions: {{recipe.directions}}
+             <p> Directions: {{recipe.directions}}</p>
             </div>
             Complete: {{ recipe.complete}}<br>
             <div><a href="#">Update</a></div>

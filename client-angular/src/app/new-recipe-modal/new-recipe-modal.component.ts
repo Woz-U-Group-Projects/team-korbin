@@ -17,8 +17,11 @@ export class NewRecipeModalComponent implements OnInit {
   newRecipe: Recipe = new Recipe();
   recipes: Recipe[];
 
-  getRecipes() {
-    this.recipeService.getRecipes().subscribe(recipes => (this.recipes = recipes));
+  getRecipe() {
+    let id = this.newRecipe.id
+
+    this.recipeService.getRecipe(id)
+    .subscribe(recipe => {this.newRecipe = recipe});
   }
 
   addRecipe() {
@@ -35,7 +38,7 @@ export class NewRecipeModalComponent implements OnInit {
       newRecipe.category = category;
       newRecipe.ingredient = ingredient;
       newRecipe.complete = true;
-      this.getRecipes();
+      // this.getRecipes();
     });
   }
   

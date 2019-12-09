@@ -22,11 +22,12 @@ export class RecipeService {
     return this.http.get<Recipe[]>(this.apiUrl);
   }
 
+  getRecipe(id: number): Observable<Recipe> {
+    return this.http.get<Recipe>(this.apiUrl + "/:" + id);
+  }
+
   addRecipe(recipe): Observable<Recipe> {
     return this.http.post<Recipe>(this.apiUrl, recipe);
   }
 
-  // getRecipe(id): Observable<Recipe> {
-  //   return this.http.get<Recipe>(this.apiUrl + "/:id");
-  // }
 }
