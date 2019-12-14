@@ -38,7 +38,7 @@ export class RecipeDisplayComponent implements OnInit {
       newRecipe.recipeName = recipeName;
       newRecipe.category = category;
       newRecipe.recipeImage = imageURL;
-      newRecipe.complete = true;
+      newRecipe.active = true;
       this.getRecipes();
     });
   }

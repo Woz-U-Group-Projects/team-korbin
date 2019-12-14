@@ -8,5 +8,5 @@ export class Recipe {
   directions: Array<string>;
   recipeImage: string;
   category: string;
-  complete: boolean;
+  active: boolean;
 }

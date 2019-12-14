@@ -9,21 +9,28 @@
         <div class="row">
             <div class="form-group">
                 <label for="recipeName">Name</label>
-                <input [(ngModel)]="newRecipe.recipeName" type="text" class="form-control"
+                <input [(ngModel)]="newRecipe.recipeName" type="text" class="form-control mb-4"
                     placeholder="My Family Recipe" />
-                <!-- <label for="ingredient">Ingredient</label>
-                    <input [(ngModel)]="newRecipe.ingredient" type="text" class="form-control" placeholder="My First Ingredient" />
-                    <label for="qty">Quantity</label>
-                    <input [(ngModel)]="newRecipe.qty" type="text" class="form-control" placeholder="My Family Recipe" /> -->
-                <input type="checkbox" [(ngModel)]="newRecipe.complete" /><br>
-                <label for="category">Category</label>
-                <select [(ngModel)]="newRecipe.category" class="form-control" aria-placeholder="Select recipe category">
-                    <option default="" value="Appetizer">Appetizer</option>
-                    <option value="Dessert">Dessert</option>
-                    <option value="Drink">Drink</option>
-                    <option value="Entree">Entree</option>
-                </select>
-                <button (click)="addRecipe()">add</button>
+                    <input type="checkbox" [(ngModel)]="newRecipe.complete" /><br>
+                <label for="ingredient">Ingredient</label>
+                <input [(ngModel)]="newRecipe.ingredient" type="text" class="form-control"
+                    placeholder="My First Ingredient" />
+                <label for="qty">Quantity</label>
+                <input [(ngModel)]="newRecipe.qty" type="text" class="form-control" placeholder="Ingedient Qyantity" />
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Category</label>
+                    </div>
+                    <select [(ngModel)]="newRecipe.category" class="form-control">
+                        <!-- <option selected>Choose...</option> -->
+                        <option value="Appetizer" >Appetizer</option>
+                        <option value="Dessert">Dessert</option>
+                        <option value="Drink">Drink</option>
+                        <option value="Entree">Entree</option>
+                    </select>
+                </div>
+                <button class="btn btn-secondary btn-sm " type="">Add Ingredient</button>
+                <button class="btn btn-primary btn-sm" (click)="addRecipe()">add</button>
             </div>
         </div>
     </div>

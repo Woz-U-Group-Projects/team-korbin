@@ -1,7 +1,7 @@
 <div>
-  <h2>Your Recipes</h2>
+  <h2><img src="../assets/logo.png">Your Recipes</h2>
   <ul class="container">
-    <li style="list-style: none;" *ngFor="let recipe of recipes | slice: -26">
+    <li style="list-style: none;" *ngFor="let recipe of recipes | slice: 1">
       <div class="card flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front card">
@@ -15,7 +15,7 @@
             <div>
              <p> Directions: {{recipe.directions}}</p>
             </div>
-            Complete: {{ recipe.complete}}<br>
+            Complete: {{ recipe.active}}<br>
             <div><a href="#">Update</a></div>
             <div><a href="#">View</a></div>
           </div>
