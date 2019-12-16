@@ -19,7 +19,7 @@ export class RecipeDisplayComponent implements OnInit {
   }
 
   getRecipe() {
-    let id = this.newRecipe.id
+    let id = this.newRecipe.vId
 
     this.recipeService.getRecipe(id)
     .subscribe(recipe => {this.newRecipe = recipe});
@@ -27,14 +27,14 @@ export class RecipeDisplayComponent implements OnInit {
 
   addRecipe() {
     const recipeName = this.newRecipe.recipeName;
-    const id = this.newRecipe.id;
+    const id = this.newRecipe.vId;
     const category = this.newRecipe.category;
     const imageURL = this.newRecipe.recipeImage;
     id + 1;
 
     this.recipeService.addRecipe(this.newRecipe).subscribe(newRecipe => {
       newRecipe = new Recipe();
-      newRecipe.id = id;
+      newRecipe.vId = id;
       newRecipe.recipeName = recipeName;
       newRecipe.category = category;
       newRecipe.recipeImage = imageURL;

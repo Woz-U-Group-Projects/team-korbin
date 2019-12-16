@@ -6,36 +6,61 @@
 </div>
 <div class="modal-body">
     <div class="container">
-        <div class="row">
-            <div class="form-group">
-                <label for="recipeName">Name</label>
-                <input [(ngModel)]="newRecipe.recipeName" type="text" class="form-control mb-4"
-                    placeholder="My Family Recipe" />
-                    <input type="checkbox" [(ngModel)]="newRecipe.complete" /><br>
-                <label for="ingredient">Ingredient</label>
-                <input [(ngModel)]="newRecipe.ingredient" type="text" class="form-control"
-                    placeholder="My First Ingredient" />
-                <label for="qty">Quantity</label>
-                <input [(ngModel)]="newRecipe.qty" type="text" class="form-control" placeholder="Ingedient Qyantity" />
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <label class="input-group-text" for="inputGroupSelect01">Category</label>
+        <ngb-tabset>
+            <ngb-tab title="Main">
+                <ng-template ngbTabContent>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="recipeName">Name</label>
+                            <input [(ngModel)]="newRecipe.recipeName" type="text" class="form-control mb-4"
+                                placeholder="My Family Recipe" />
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Category</label>
+                                </div>
+                                <select [(ngModel)]="newRecipe.category" class="form-control">
+                                    <!-- <option selected>Choose...</option> -->
+                                    <option value="Appetizer">Appetizer</option>
+                                    <option value="Dessert">Dessert</option>
+                                    <option value="Drink">Drink</option>
+                                    <option value="Entree">Entree</option>
+                                </select>
+                            </div>
+                            <input type="checkbox" [(ngModel)]="newRecipe.active" /><br>
+                        </div>
+                        <div class="col-8">
+                            <label for="ingredient">Ingredient</label>
+                            <input [(ngModel)]="newRecipe.ingredient" type="text" class="form-control"
+                                placeholder="Add My Measurement" />
+                            <label for="ingredient">Measurement</label>
+                            <input [(ngModel)]="newRecipe.measurement" type="text" class="form-control"
+                                placeholder="Add My Quantity" />
+                            <label for="qty">Quantity</label>
+                            <input [(ngModel)]="newRecipe.qty" type="text" class="form-control"
+                                placeholder="Ingredient Quantity" />
+                            <button class="btn btn-secondary btn-sm " type="">Add Ingredient</button>
+                        </div>
                     </div>
-                    <select [(ngModel)]="newRecipe.category" class="form-control">
-                        <!-- <option selected>Choose...</option> -->
-                        <option value="Appetizer" >Appetizer</option>
-                        <option value="Dessert">Dessert</option>
-                        <option value="Drink">Drink</option>
-                        <option value="Entree">Entree</option>
-                    </select>
-                </div>
-                <button class="btn btn-secondary btn-sm " type="">Add Ingredient</button>
-                <button class="btn btn-primary btn-sm" (click)="addRecipe()">add</button>
-            </div>
-        </div>
+                </ng-template>
+            </ngb-tab>
+            <ngb-tab title="Directions">
+                <ng-template ngbTabContent>
+                    <label for="directions">Directions</label>
+                    <input [(ngModel)]="newRecipe.directions" type="text" class="form-control"
+                        placeholder="Input your directions here" />
+                    <button class="btn btn-secondary btn-sm" >More steps</button>
+
+                </ng-template>
+            </ngb-tab>
+            <ngb-tab title="Comments" [disabled]="true">
+                <ng-template></ng-template>
+            </ngb-tab>
+        </ngb-tabset>
     </div>
     <p> {{my_modal_content}}</p>
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+    <button class="btn btn-primary btn-md" (click)="addRecipe()">Add Recipe</button>
+    <button type="button" class="btn btn-outline-dark btn-secondary"
+        (click)="activeModal.close('Close click')">Close</button>
 </div>

@@ -13,17 +13,16 @@ export class AppComponent {
 
   closeResult: string;
   modalOptions:NgbModalOptions;
-  constructor(
-    private modalService: NgbModal
-  ){
+  constructor(private modalService: NgbModal){
     this.modalOptions = {
       backdrop:'static',
-      backdropClass:'customBackdrop'
+      backdropClass:'customBackdrop',
+      size: 'lg'
     }
   }
   
   open() {
-    const modalRef = this.modalService.open(NewRecipeModalComponent);
+    const modalRef = this.modalService.open(NewRecipeModalComponent, { size: 'lg' });
     modalRef.componentInstance.my_modal_title = 'New Recipe';
     // modalRef.componentInstance.my_modal_content = 'I am your content';
   }

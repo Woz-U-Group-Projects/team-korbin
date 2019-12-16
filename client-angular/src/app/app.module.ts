@@ -1,13 +1,14 @@
-import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
-import { RecipeDisplayComponent } from "./recipe-display/recipe-display.component";
+import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { FormsModule } from "@angular/forms";
+import { AppRoutingModule } from "./app-routing.module";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { AppComponent } from "./app.component";
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { RecipeDisplayComponent } from "./recipe-display/recipe-display.component";
 import { NewRecipeModalComponent } from "./new-recipe-modal/new-recipe-modal.component";
 import { ViewRecipeComponent } from './view-recipe/view-recipe.component';
 
