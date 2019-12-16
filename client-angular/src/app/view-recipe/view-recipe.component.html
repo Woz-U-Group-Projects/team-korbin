@@ -1,40 +1,57 @@
 <div class="container">
     <div class="row">
-        <div class="col-4">
+        <nav class="col-4 nav">
             <ngb-accordion [closeOthers]="true" activeIds="static-1">
-                <ngb-panel id="static-1" title="Appetizers">
+                <ngb-panel class="nav-link" id="static-1" title="Appetizers">
                     <ng-template ngbPanelContent>
-                        <nav *ngFor="let recipe of filterApp">
-                            <ul *ngIf="(recipe.category === 'Appetizer')"><li>{{recipe.category}}</li></ul>
+                        <nav *ngFor="let recipe of recipes">
+                            <ul *ngIf="recipe.category === 'Appetizer'">
+                                <li style="list-style: none;">
+                                    <a [href]="recipe.vId">{{recipe.recipeName}}</a></li>
+                            </ul>
                         </nav>
                     </ng-template>
                 </ngb-panel>
-                <ngb-panel id="static-2" title="Entree">
+                <ngb-panel id="static-2" title="Entrees">
                     <ng-template ngbPanelContent>
                         <nav *ngFor="let recipe of recipes">
-                            <li>{{recipe.category}}</li>
+                            <ul *ngIf="recipe.category === 'Entree'">
+                                <li style="list-style: none;">
+                                    <a [href]="'recipe/' + recipe.id">{{recipe.recipeName}}</a></li>
+                            </ul>
                         </nav>
                     </ng-template>
                 </ngb-panel>
-                <ngb-panel id="static-3" title="Dessert">
+                <ngb-panel id="static-3" title="Desserts">
                     <ng-template ngbPanelContent>
                         <nav *ngFor="let recipe of recipes">
-                            <li>{{recipe.category}}</li>
+                            <ul *ngIf="recipe.category === 'Dessert'">
+                                <li style="list-style: none;">
+                                    <a [href]="'recipe/' + recipe.id">{{recipe.recipeName}}</a></li>
+                            </ul>
                         </nav>
                     </ng-template>
                 </ngb-panel>
-                <ngb-panel id="static-4" title="Drink">
+                <ngb-panel id="static-4" title="Drinks">
                     <ng-template ngbPanelContent>
                         <nav *ngFor="let recipe of recipes">
-                            <li>{{recipe.category}}</li>
+                            <ul *ngIf="recipe.category === 'Drink'">
+                                <li style="list-style: none;">
+                                    <a [href]="'recipe/' + recipe.id">{{recipe.recipeName}}</a></li>
+                            </ul>
                         </nav>
                     </ng-template>
                 </ngb-panel>
             </ngb-accordion>
-        </div>
-        <div class="col-8 recipe-bgd">Recipe Dispayed
-            <div>{{recipe.recipeName}}</div>
-            <div></div>
+        </nav>
+        <div class="col-8 recipe-bgd" *ngFor="let recipe of recipes">
+            <div><label for="recipe-name">Recipe Name</label>
+                <h2>{{recipe.recipeName}}</h2>
+                <div><img class="img" [src]="recipe.image" [alt]="recipe.name">{{recipe.image}}</div>
+            </div>
+            <div>{{recipe.directions}}</div>
+            <div>{{recipe.category}}</div>
+            <div>{{recipe.ingredients}}</div>
         </div>
     </div>
 </div>

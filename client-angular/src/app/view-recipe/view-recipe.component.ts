@@ -19,16 +19,33 @@ recipe: Recipe;
   }
 
   getRecipe() {
-    let id = this.recipe.vId;
-    this.recipeService.getRecipe(id)
-    .subscribe(recipe => (this.recipe = recipe));
+    const id = this.recipe.vId;
+    const name = this.recipe.recipeName;
+    const category = this.recipe.category;
+    const active = this.recipe.active;
+    const ingredient = this.recipe.ingredient[0];
+    const qty = this.recipe.qty[0];
+    const measurement = this.recipe.measurement[0];
+    const directions = this.recipe.directions;
+    
+    let viewRecipe = this.recipeService.getRecipe(id);
+    viewRecipe.subscribe(recipe => (this.recipe = recipe));
+    this.recipe.vId = id;
+    this.recipe.recipeName = name;
+    this.recipe.category = category;
+    this.recipe.active = active;
+    this.recipe.ingredient = ingredient[0];
+    this.recipe.qty = qty[0];
+    this.recipe.measurement = measurement[0];
+    this.recipe.directions = directions;
+    
   }
 
-  getRecipeByCategoryApp(category: String): Observable<Recipe[]>{
-    return this.getRecipes().pipe(
-    map((recipes: Recipe[]) => recipes.filter(rec => rec.category === 'Appetizer'))
-    );
-  }
+  // getRecipeByCategoryApp(category: String): Observable<Recipe[]>{
+  //   return this.getRecipes().pipe(
+  //   map((recipes: Recipe[]) => recipes.filter(rec => rec.category === 'Appetizer'))
+  //   );
+  // }
 
   ngOnInit() {
     this.getRecipes()
