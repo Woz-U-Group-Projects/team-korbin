@@ -16,8 +16,8 @@
              <p> Directions: {{recipe.directions}}</p>
             </div>
             Complete: {{ recipe.active}}<br>
-            <div><a href="#">Update</a></div>
-            <div><a href="#">View</a></div>
+            <div><a href="#" >Update</a></div>
+            <div><a href="#" [routerLink]="['/recipes/recipe', recipe.vId]">View</a></div>
           </div>
         </div>
       </div>

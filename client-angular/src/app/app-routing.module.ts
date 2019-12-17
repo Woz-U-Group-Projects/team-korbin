@@ -6,8 +6,8 @@ import { ViewRecipeComponent } from './view-recipe/view-recipe.component';
 
 const routes: Routes = [
   { path: 'recipe-display', component: RecipeDisplayComponent},
-  { path: 'view-recipe', component: ViewRecipeComponent},
-  { path: 'recipe/:vId', component: ViewRecipeComponent},
+  { path: 'recipes', component: ViewRecipeComponent},
+  { path: 'recipes/recipe/:vId', component: ViewRecipeComponent},
   { path: 'home', component: RecipeDisplayComponent},
   { path: '', redirectTo: '/recipe-display', pathMatch: 'full'}
 ];

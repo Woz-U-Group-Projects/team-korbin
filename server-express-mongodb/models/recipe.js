@@ -1,16 +1,61 @@
-"use strict";
+// "use strict";
 
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
+var IngredientSchema = new Schema({
+  id: {
+    type: Number,
+    required: false
+  },
+  ingredient: {
+    type: String,
+    trim: true,
+    required: false
+  },
+  measurement: {
+    type: String,
+    required: false
+  },
+  qty: {
+    type: Number,
+    required: false
+  }
+});
+
 var RecipeSchema = new Schema({
-  recipeId: { type: Number, required: false },
-  recipeName: { type: String, required: true },
-  complete: { type: Boolean, required: false }
+  id: {
+    type: Number,
+    required: false
+  },
+  recipeName: {
+    type: String,
+    trim: true,
+    required: true
+  },
+  ingredients: [IngredientSchema],
+directions: {
+  type: Array,
+    required: false,
+    default: []
+},
+recipeImage: {
+  type: String,
+    required: false,
+    default: 'https://delishusapp.s3.amazonaws.com/images/RecipeIconPlaceholder.png'
+},
+active: {
+  type: Boolean,
+    required: false
+},
+created_at: {
+  type: Date,
+    default: Date.now
+}
 });
 
 // Duplicate the ID field.
-RecipeSchema.virtual("id").get(function() {
+RecipeSchema.virtual("vId").get(function () {
   return this._id.toHexString();
 });
 
@@ -19,4 +64,4 @@ RecipeSchema.set("toJSON", {
   virtuals: true
 });
 
-module.exports = mongoose.model("Recipe", RecipeSchema);
+module.exports = mongoose.model("Recipe", RecipeSchema, 'recipeapp');

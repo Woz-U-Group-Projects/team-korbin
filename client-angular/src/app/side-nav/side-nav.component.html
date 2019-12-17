@@ -1,0 +1,50 @@
+<div class="container-fluid" >
+    <div class="row">
+        <nav class="col-4 nav">
+            <ngb-accordion [closeOthers]="true" activeIds="static-1">
+                <ngb-panel class="nav-link" id="static-1" title="Appetizers">
+                    <ng-template ngbPanelContent>
+                        <nav *ngFor="let recipe of recipes">
+                            <ul *ngIf="recipe.category === 'Appetizer'">
+                                <li style="list-style: none;">
+                                    <a [href]="'recipes/recipe/' + recipe.vId" [routerLink]="['/recipes/recipe', recipe.vId]">{{recipe.recipeName}}</a></li>
+                            </ul>
+                        </nav>
+                    </ng-template>
+                </ngb-panel>
+                <ngb-panel id="static-2" title="Entrees">
+                    <ng-template ngbPanelContent>
+                        <nav *ngFor="let recipe of recipes">
+                            <ul *ngIf="recipe.category === 'Entree'">
+                                <li style="list-style: none;">
+                                    <a [href]="'recipe/' + recipe.id">{{recipe.recipeName}}</a></li>
+                            </ul>
+                        </nav>
+                    </ng-template>
+                </ngb-panel>
+                <ngb-panel id="static-3" title="Desserts">
+                    <ng-template ngbPanelContent>
+                        <nav *ngFor="let recipe of recipes">
+                            <ul *ngIf="recipe.category === 'Dessert'">
+                                <li style="list-style: none;">
+                                    <a [href]="'recipe/' + recipe.id">{{recipe.recipeName}}</a></li>
+                            </ul>
+                        </nav>
+                    </ng-template>
+                </ngb-panel>
+                <ngb-panel id="static-4" title="Drinks">
+                    <ng-template ngbPanelContent>
+                        <nav *ngFor="let recipe of recipes">
+                            <ul *ngIf="recipe.category === 'Drink'">
+                                <li style="list-style: none;">
+                                    <a [href]="'recipe/' + recipe.id">{{recipe.recipeName}}</a></li>
+                            </ul>
+                        </nav>
+                    </ng-template>
+                </ngb-panel>
+            </ngb-accordion>
+        </nav>
+        <div class="col-8">
+            <!-- <router-outlet></router-outlet> -->
+        </div>
+    </div>

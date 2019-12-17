@@ -3,6 +3,7 @@ import { RecipeService } from '../recipe.service';
 import { Recipe } from '../models/recipe';
 import { Observable, pipe } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-recipe',
@@ -10,12 +11,20 @@ import { filter, map } from 'rxjs/operators';
   styleUrls: ['./view-recipe.component.css']
 })
 export class ViewRecipeComponent implements OnInit {
-recipes: Recipe[] = [];
-recipe: Recipe;
-  constructor( private recipeService: RecipeService ) { }
+  recipes: Recipe[] = [];
+  recipe: Recipe;
+  constructor(private recipeService: RecipeService, private route: ActivatedRoute, private router: Router) { }
 
   getRecipes() {
     this.recipeService.getRecipes().subscribe(recipes => (this.recipes = recipes));
+  }
+
+  getRecipeDetails(vId: string) {
+    this.recipeService.getRecipe(vId)
+    .subscribe((recipe: any) => {
+      this.recipe = recipe;
+      console.log(this.recipe);
+    })
   }
 
   getRecipe() {
@@ -27,7 +36,7 @@ recipe: Recipe;
     const qty = this.recipe.qty[0];
     const measurement = this.recipe.measurement[0];
     const directions = this.recipe.directions;
-    
+
     let viewRecipe = this.recipeService.getRecipe(id);
     viewRecipe.subscribe(recipe => (this.recipe = recipe));
     this.recipe.vId = id;
@@ -38,7 +47,6 @@ recipe: Recipe;
     this.recipe.qty = qty[0];
     this.recipe.measurement = measurement[0];
     this.recipe.directions = directions;
-    
   }
 
   // getRecipeByCategoryApp(category: String): Observable<Recipe[]>{
@@ -48,7 +56,8 @@ recipe: Recipe;
   // }
 
   ngOnInit() {
-    this.getRecipes()
+    // this.getRecipes();
+    this.getRecipeDetails(this.route.snapshot.params['vId']);
   }
 
 }

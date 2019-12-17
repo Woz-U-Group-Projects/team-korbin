@@ -74,7 +74,10 @@
   }
 
   .card-header {
+    white-space: nowrap;
     text-overflow: ellipsis;
+    width: auto;
+    overflow: hidden;
     background-color: midnightblue;
     color: mintcream;
   }
