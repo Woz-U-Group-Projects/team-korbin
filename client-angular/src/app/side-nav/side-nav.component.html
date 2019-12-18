@@ -17,7 +17,7 @@
                         <nav *ngFor="let recipe of recipes">
                             <ul *ngIf="recipe.category === 'Entree'">
                                 <li style="list-style: none;">
-                                    <a [href]="'recipe/' + recipe.id">{{recipe.recipeName}}</a></li>
+                                    <a [href]="'recipes/recipe/' + recipe.vId" [routerLink]="['/recipes/recipe', recipe.vId]">{{recipe.recipeName}}</a></li>
                             </ul>
                         </nav>
                     </ng-template>
@@ -27,7 +27,7 @@
                         <nav *ngFor="let recipe of recipes">
                             <ul *ngIf="recipe.category === 'Dessert'">
                                 <li style="list-style: none;">
-                                    <a [href]="'recipe/' + recipe.id">{{recipe.recipeName}}</a></li>
+                                    <a [href]="'recipes/recipe/' + recipe.vId" [routerLink]="['/recipes/recipe', recipe.vId]">{{recipe.recipeName}}</a></li>
                             </ul>
                         </nav>
                     </ng-template>
@@ -37,7 +37,7 @@
                         <nav *ngFor="let recipe of recipes">
                             <ul *ngIf="recipe.category === 'Drink'">
                                 <li style="list-style: none;">
-                                    <a [href]="'recipe/' + recipe.id">{{recipe.recipeName}}</a></li>
+                                    <a [href]="'recipes/recipe/' + recipe.vId" [routerLink]="['/recipes/recipe', recipe.vId]">{{recipe.recipeName}}</a></li>
                             </ul>
                         </nav>
                     </ng-template>
@@ -45,6 +45,6 @@
             </ngb-accordion>
         </nav>
         <div class="col-8">
-            <!-- <router-outlet></router-outlet> -->
+            <router-outlet></router-outlet>
         </div>
     </div>

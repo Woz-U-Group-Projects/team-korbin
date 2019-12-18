@@ -1,5 +1,4 @@
 export class Recipe {
-  [x: string]: any;
   vId: string;
   recipeName: string;
   ingredients: Array<any>;

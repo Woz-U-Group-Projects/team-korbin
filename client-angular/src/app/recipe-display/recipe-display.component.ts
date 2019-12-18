@@ -11,6 +11,7 @@ export class RecipeDisplayComponent implements OnInit {
   constructor(private recipeService: RecipeService) { }
   newRecipe: Recipe = new Recipe();
   recipes: Recipe[] = [];
+  recipe: Recipe;
   imageURL: string;
 
 
@@ -22,7 +23,7 @@ export class RecipeDisplayComponent implements OnInit {
     let id = this.newRecipe.vId
 
     this.recipeService.getRecipe(id)
-    .subscribe(recipe => {this.newRecipe = recipe});
+      .subscribe(recipe => { this.newRecipe = recipe });
   }
 
   addRecipe() {
@@ -47,6 +48,15 @@ export class RecipeDisplayComponent implements OnInit {
     // const id = this.recipe.id;
     // this.recipeService.getRecipe(this.recipe);
     // this.recipeService.updateRecipe(this.newRecipe);
+  }
+
+  deleteRecipe(vId: string) {
+    vId = this.recipe.vId;
+    this.recipeService.deletePermRecipe(vId)
+      .subscribe((recipe: any) => {
+        this.recipe = recipe;
+        console.log(this.recipe);
+      })
   }
 
   ngOnInit() {

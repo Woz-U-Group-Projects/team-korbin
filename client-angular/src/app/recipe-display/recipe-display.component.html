@@ -12,12 +12,13 @@
             </div>
           </div>
           <div class="flip-card-back card">
-            <div>
+            <div class="card-back-container" style="width: 100%; height: 250px;">
              <p> Directions: {{recipe.directions}}</p>
             </div>
-            Complete: {{ recipe.active}}<br>
-            <div><a href="#" >Update</a></div>
-            <div><a href="#" [routerLink]="['/recipes/recipe', recipe.vId]">View</a></div>
+            
+            <div class="card-footer">Options: <a href="#" >Update</a> | 
+            <a href="#" [routerLink]="['/recipes/recipe', recipe.vId]">View</a> | 
+            <a href="#" [routerLink]="['/recipes/recipe/delete', recipe.vId]" (click)="deleteRecipe()">Delete</a></div>
           </div>
         </div>
       </div>

@@ -12,9 +12,10 @@ import { RecipeDisplayComponent } from "./recipe-display/recipe-display.componen
 import { NewRecipeModalComponent } from "./new-recipe-modal/new-recipe-modal.component";
 import { ViewRecipeComponent } from './view-recipe/view-recipe.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
-  declarations: [AppComponent, RecipeDisplayComponent, NavBarComponent, NewRecipeModalComponent, ViewRecipeComponent, SideNavComponent],
+  declarations: [AppComponent, RecipeDisplayComponent, NavBarComponent, NewRecipeModalComponent, ViewRecipeComponent, SideNavComponent, AboutComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, BrowserAnimationsModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],

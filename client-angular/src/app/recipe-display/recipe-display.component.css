@@ -81,3 +81,11 @@
     background-color: midnightblue;
     color: mintcream;
   }
+
+  .card-back-container {
+    height: 100%;
+    white-space: normal; 
+    text-overflow: ellipsis;
+    width: auto;
+    overflow: hidden;
+  }

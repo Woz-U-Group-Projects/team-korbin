@@ -25,9 +25,12 @@ export class RecipeService {
   getRecipe(vId: string): Observable<Recipe> {
     return this.http.get<Recipe>(`${this.apiUrl}/recipe/${vId}`);
   }
-
+  
   addRecipe(recipe): Observable<Recipe> {
     return this.http.post<Recipe>(this.apiUrl, recipe);
   }
-
+  
+  deletePermRecipe(vId: string): Observable<Recipe> {
+    return this.http.get<Recipe>(`${this.apiUrl}/recipe/delete/${vId}`);
+  }
 }

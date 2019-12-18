@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <h4 class="modal-title">{{my_modal_title}}</h4>
+    <h4 class="modal-title"><img src="../../assets/logo.png" style="height: 38px;" alt=""> {{my_modal_title}}</h4>
     <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -31,12 +31,12 @@
                         <div class="col-8">
                             <label for="ingredient">Ingredient</label>
                             <input [(ngModel)]="newRecipe.ingredient" type="text" class="form-control"
-                                placeholder="Add My Measurement" />
+                                placeholder="Add My Ingredient" />
                             <label for="ingredient">Measurement</label>
                             <input [(ngModel)]="newRecipe.measurement" type="text" class="form-control"
-                                placeholder="Add My Quantity" />
+                                placeholder="Add My Measurement" />
                             <label for="qty">Quantity</label>
-                            <input [(ngModel)]="newRecipe.qty" type="text" class="form-control"
+                            <input [(ngModel)]="newRecipe.ingredientQty" type="text" class="form-control"
                                 placeholder="Ingredient Quantity" />
                             <button class="btn btn-secondary btn-sm " type="">Add Ingredient</button>
                         </div>
@@ -48,8 +48,7 @@
                     <label for="directions">Directions</label>
                     <input [(ngModel)]="newRecipe.directions" type="text" class="form-control"
                         placeholder="Input your directions here" />
-                    <button class="btn btn-secondary btn-sm" >More steps</button>
-
+                    <button class="btn btn-secondary btn-sm">More steps</button>
                 </ng-template>
             </ngb-tab>
             <ngb-tab title="Comments" [disabled]="true">
