@@ -51,13 +51,23 @@ export class RecipeDisplayComponent implements OnInit {
   }
 
   deleteRecipe(vId: string) {
-    vId = this.recipe.vId;
-    this.recipeService.deletePermRecipe(vId)
-      .subscribe((recipe: any) => {
-        this.recipe = recipe;
-        console.log(this.recipe);
-      })
-  }
+    // this.recipe.vId = vId;
+    // this.recipeService.deletePermRecipe(vId)
+    //   .subscribe((recipe: any) => {
+    //     // this.recipe = recipe;
+    //     this.getRecipes();
+    //   })
+   
+      let recipeIndex = 0;
+      for(let recipe of this.recipes) {
+        if(recipe.vId === vId) {
+          this.recipes.splice(recipeIndex, 1);
+          break;
+        }
+        recipeIndex++;
+      }
+    }
+  
 
   ngOnInit() {
     this.getRecipes();

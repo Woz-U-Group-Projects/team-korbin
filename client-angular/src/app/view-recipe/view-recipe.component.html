@@ -1,15 +1,15 @@
-<app-side-nav></app-side-nav>
+<!-- <app-side-nav></app-side-nav> -->
 <div class="container">
+    <h2><img src="../../assets/logo.png" alt=""> {{ recipe.recipeName }}</h2>
     <div>
-        <div class="col-8 recipe-bgd" *ngFor="let recipe of recipes">
-        <!-- <div class="col-8 recipe-bgd" *ngIf="recipe.vId === params.vId"> -->
-            <div><label for="recipe-name">Recipe Name</label>
-                <h2>{{recipe.recipeName}}</h2>
-                <div><img class="img" [src]="recipe.image" [alt]="recipe.name">{{recipe.image}}</div>
-            </div>
+        <div>
+            <!-- <label for="recipe-name">Recipe Name</label> -->
+            <!-- <h2>{{recipe.recipeName}}</h2> -->
+            <div class="col-2"><img class="img" [src]="recipe.recipeImage" [alt]="recipe.recipeName">{{recipe.image}}</div>
             <div>{{recipe.directions}}</div>
-            <div>{{recipe.category}}</div>
-            <div>{{recipe.ingredients}}</div>
         </div>
+        <div>{{recipe.category}}</div>
+        <div>{{recipe.ingredients[0]}}</div>
+        <!-- </div> -->
+        <!-- </div> -->
     </div>
-</div>

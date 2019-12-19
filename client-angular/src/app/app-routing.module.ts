@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'recipe-display', component: RecipeDisplayComponent},
   { path: 'recipes', component: ViewRecipeComponent},
   { path: 'recipes/recipe/:vId', component: ViewRecipeComponent},
-  { path: 'recipes/recipe/delete/:vId', component: RecipeDisplayComponent},
+  { path: 'recipes/delete/:vId', component: RecipeDisplayComponent},
   { path: 'home', component: RecipeDisplayComponent},
   { path: 'about', component: AboutComponent},
   { path: '', redirectTo: '/recipe-display', pathMatch: 'full'}

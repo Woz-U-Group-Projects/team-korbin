@@ -18,7 +18,7 @@
             
             <div class="card-footer">Options: <a href="#" >Update</a> | 
             <a href="#" [routerLink]="['/recipes/recipe', recipe.vId]">View</a> | 
-            <a href="#" [routerLink]="['/recipes/recipe/delete', recipe.vId]" (click)="deleteRecipe()">Delete</a></div>
+            <a href="#" [routerLink]="['/recipes/delete', recipe.vId]" (click)="deleteRecipe(recipe.vId)">Delete</a></div>
           </div>
         </div>
       </div>

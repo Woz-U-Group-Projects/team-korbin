@@ -31,6 +31,6 @@ export class RecipeService {
   }
   
   deletePermRecipe(vId: string): Observable<Recipe> {
-    return this.http.get<Recipe>(`${this.apiUrl}/recipe/delete/${vId}`);
+    return this.http.delete<Recipe>(`${this.apiUrl}/delete/${vId}`);
   }
 }

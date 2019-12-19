@@ -24,7 +24,7 @@ export class ViewRecipeComponent implements OnInit {
     .subscribe((recipe: any) => {
       this.recipe = recipe;
       console.log(this.recipe);
-    })
+    });
   }
 
   getRecipe() {
@@ -57,7 +57,7 @@ export class ViewRecipeComponent implements OnInit {
 
   ngOnInit() {
     // this.getRecipes();
-    this.getRecipeDetails(this.route.snapshot.params['vId']);
+    this.getRecipeDetails(this.route.snapshot.params.vId);
   }
 
 }
